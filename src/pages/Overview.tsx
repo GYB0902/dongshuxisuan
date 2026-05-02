@@ -184,7 +184,7 @@ export function Overview() {
       green: next.kpis.greenRatio,
       pue: next.kpis.pueAverage,
     });
-    notify('已重新爬取公开网页并刷新概览数据');
+    notify(next.meta.error ? '后端 API 未连接，已使用内置真实数据快照' : '已重新爬取公开网页并刷新概览数据');
   };
 
   return (

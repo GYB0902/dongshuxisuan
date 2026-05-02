@@ -139,25 +139,56 @@ type ApiResponse = {
   data: LiveDataset;
 };
 
-const API_BASE =
-  ((import.meta as ImportMeta & { env?: Record<string, string | undefined> }).env?.VITE_API_BASE_URL) || '';
+const ENV = (import.meta as ImportMeta & { env?: Record<string, string | undefined> }).env;
+const API_BASE = ENV?.VITE_API_BASE_URL || '';
+const STATIC_DATA_URL = `${ENV?.BASE_URL || '/'}data/live_overview.json`;
 
 let cachedLiveData: LiveDataset | null = null;
 let pendingRequest: Promise<LiveDataset> | null = null;
+
+async function fetchApiOverview(refresh = false) {
+  const url = `${API_BASE}/api/live/overview${refresh ? '?refresh=1' : ''}`;
+
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`API ${response.status}`);
+
+  const payload = (await response.json()) as ApiResponse;
+  if (!payload?.data) throw new Error('API 返回格式异常');
+
+  return payload.data;
+}
+
+async function fetchStaticOverview(reason: string, refresh = false) {
+  const response = await fetch(STATIC_DATA_URL, {
+    cache: refresh ? 'reload' : 'default',
+  });
+
+  if (!response.ok) throw new Error(`静态数据 ${response.status}`);
+
+  const data = (await response.json()) as LiveDataset;
+  return {
+    ...data,
+    meta: {
+      ...data.meta,
+      cacheHit: true,
+      stale: true,
+      method: `${data.meta.method}（静态部署备用数据）`,
+      error: reason,
+    },
+  };
+}
 
 export async function fetchLiveOverview(refresh = false) {
   if (cachedLiveData && !refresh) return cachedLiveData;
   if (pendingRequest && !refresh) return pendingRequest;
 
-  const url = `${API_BASE}/api/live/overview${refresh ? '?refresh=1' : ''}`;
-  pendingRequest = fetch(url)
-    .then((response) => {
-      if (!response.ok) throw new Error(`API ${response.status}`);
-      return response.json() as Promise<ApiResponse>;
-    })
-    .then((payload) => {
-      cachedLiveData = payload.data;
-      return payload.data;
+  pendingRequest = fetchApiOverview(refresh)
+    .catch((error) =>
+      fetchStaticOverview(error instanceof Error ? error.message : '后端 API 未连接', refresh),
+    )
+    .then((data) => {
+      cachedLiveData = data;
+      return data;
     })
     .finally(() => {
       pendingRequest = null;

@@ -1,0 +1,2300 @@
+{
+  "meta": {
+    "generatedAt": "2026-05-02T16:21:32",
+    "cacheTtlMinutes": 30,
+    "liveSourceCount": 11,
+    "totalSourceCount": 11,
+    "highlightCount": 30,
+    "cityCount": 12,
+    "method": "后端实时爬取公开网页，并用抓取到的核心指标派生图表数据",
+    "cacheHit": false,
+    "stale": false
+  },
+  "sources": [
+    {
+      "id": "xinhua_green_compute",
+      "name": "新华社：草原云谷 数智奔涌",
+      "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:29",
+      "year": 2025,
+      "error": ""
+    },
+    {
+      "id": "digital_china",
+      "name": "数字中国：内蒙古绿色算力大基地建设",
+      "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:29",
+      "year": 2025,
+      "error": ""
+    },
+    {
+      "id": "nmg_stats_2024",
+      "name": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+      "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:30",
+      "year": 2024,
+      "error": ""
+    },
+    {
+      "id": "ndrc_east_data_west_compute",
+      "name": "国家发改委：全国一体化算力网络枢纽节点",
+      "url": "https://www.ndrc.gov.cn/fzggw/jgsj/gjss/sjdt/202208/t20220829_1334082.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:30",
+      "year": null,
+      "error": ""
+    },
+    {
+      "id": "nmg_green_power_base",
+      "name": "内蒙古自治区政府：能源战略资源基地建设",
+      "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:30",
+      "year": 2025,
+      "error": ""
+    },
+    {
+      "id": "ndrc_data_center_green",
+      "name": "国家发改委：数据中心绿色低碳发展",
+      "url": "https://www.ndrc.gov.cn/wsdwhfz/202106/t20210602_1282500.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:31",
+      "year": null,
+      "error": ""
+    },
+    {
+      "id": "nmg_helingeer_policy",
+      "name": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+      "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:31",
+      "year": 2024,
+      "error": ""
+    },
+    {
+      "id": "nmg_science_compute",
+      "name": "内蒙古科技厅：绿色算力与科技创新动态",
+      "url": "https://kjt.nmg.gov.cn/slb/kjdt/mscx/202409/t20240906_2570373.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:31",
+      "year": 2024,
+      "error": ""
+    },
+    {
+      "id": "cyol_green_compute",
+      "name": "中国青年报：绿色算力产业观察",
+      "url": "https://zqb.cyol.com/pc/content/202604/22/content_424986.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:31",
+      "year": 2026,
+      "error": ""
+    },
+    {
+      "id": "china_power_green_compute",
+      "name": "中国电力报：绿电支撑算力发展",
+      "url": "https://www.chinapower.org.cn/detail/457602.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:31",
+      "year": null,
+      "error": ""
+    },
+    {
+      "id": "people_energy_report",
+      "name": "人民日报：中国能源报绿色算力报道",
+      "url": "https://paper.people.com.cn/zgnyb/pad/content/202507/21/content_30089680.html",
+      "ok": true,
+      "fetchedAt": "2026-05-02T16:21:32",
+      "year": 2025,
+      "error": ""
+    }
+  ],
+  "sourceHighlights": [
+    {
+      "sourceId": "xinhua_green_compute",
+      "source": "新华社：草原云谷 数智奔涌",
+      "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+      "metric": "算力规模",
+      "value": "12.6",
+      "unit": "万P",
+      "snippet": "： 内蒙古扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…"
+    },
+    {
+      "sourceId": "xinhua_green_compute",
+      "source": "新华社：草原云谷 数智奔涌",
+      "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+      "metric": "算力规模",
+      "value": "11.6",
+      "unit": "万P",
+      "snippet": "基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们"
+    },
+    {
+      "sourceId": "xinhua_green_compute",
+      "source": "新华社：草原云谷 数智奔涌",
+      "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+      "metric": "绿电占比",
+      "value": "84.57",
+      "unit": "%",
+      "snippet": "来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们对内蒙古绿色算力产业发展前景充满信心。 2023年，《国"
+    },
+    {
+      "sourceId": "xinhua_green_compute",
+      "source": "新华社：草原云谷 数智奔涌",
+      "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+      "metric": "减排量",
+      "value": "7380",
+      "unit": "吨",
+      "snippet": "耗；在优刻得乌兰察布智算中心，机房产生的热量被回收，用于供暖，每年可回收废热78000吉焦，减少二氧化碳排放量约7380吨。 为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等方面发力。同时，内蒙古"
+    },
+    {
+      "sourceId": "xinhua_green_compute",
+      "source": "新华社：草原云谷 数智奔涌",
+      "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+      "metric": "新能源装机",
+      "value": "1.35",
+      "unit": "亿千瓦",
+      "snippet": "内蒙古强大的绿电供应能力。据内蒙古自治区能源局局长曹思阳介绍，2024年，内蒙古风力、光伏等新能源累计装机规模突破1.35亿千瓦，超越火电装机量，新能源总装机、新增装机、发电量等多项指标稳居全国首位。 这是2023年8月"
+    },
+    {
+      "sourceId": "digital_china",
+      "source": "数字中国：内蒙古绿色算力大基地建设",
+      "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+      "metric": "算力规模",
+      "value": "12.6",
+      "unit": "万P",
+      "snippet": "GJ，减少二氧化碳排放量约7380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11.6万P，规模居全国第一。为推动绿色算力产业发展，内蒙古出台专项政策，从产业布"
+    },
+    {
+      "sourceId": "digital_china",
+      "source": "数字中国：内蒙古绿色算力大基地建设",
+      "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+      "metric": "算力规模",
+      "value": "11.6",
+      "unit": "万P",
+      "snippet": "380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11.6万P，规模居全国第一。为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等六个方面"
+    },
+    {
+      "sourceId": "digital_china",
+      "source": "数字中国：内蒙古绿色算力大基地建设",
+      "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+      "metric": "绿电占比",
+      "value": "84.57",
+      "unit": "%",
+      "snippet": "，打造全国绿色算力保障基地和大模型训练推理基地。今年一季度，集群内数据中心用电12.2亿度，绿电占比高达84.57%，领跑全国。 内蒙古的绿算产业，不仅能源清洁，更构建起全流程低碳体系。呼和浩特市和林格尔新区"
+    },
+    {
+      "sourceId": "digital_china",
+      "source": "数字中国：内蒙古绿色算力大基地建设",
+      "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+      "metric": "PUE",
+      "value": "1.06",
+      "unit": "",
+      "snippet": "程低碳体系。呼和浩特市和林格尔新区的内蒙古百川数字科技有限公司生产的超聚变全液冷服务器，制冷PUE低至1.06，从源头端有效降低了数据中心能耗。优刻得乌兰察布市智算中心负责人冯永成说，中心将机房产生的热"
+    },
+    {
+      "sourceId": "digital_china",
+      "source": "数字中国：内蒙古绿色算力大基地建设",
+      "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+      "metric": "减排量",
+      "value": "7380",
+      "unit": "吨",
+      "snippet": "心将机房产生的热量进行回收，用于供暖，整个冬季无需交供暖费。“每年可回收废热78000GJ，减少二氧化碳排放量约7380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11"
+    },
+    {
+      "sourceId": "nmg_stats_2024",
+      "source": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+      "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+      "metric": "投资规模",
+      "value": "937.4",
+      "unit": "亿元",
+      "snippet": "] 比上年增长 1.6 % ， 扣除房地产开发投资 ,民间投资增长6.6%。 全年房地产开发投资 937.4 亿元，比上年 下降 [ 22 ] 7.2 %。其中，住宅投资 715.3 亿元， 下降 9.2"
+    },
+    {
+      "sourceId": "nmg_stats_2024",
+      "source": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+      "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+      "metric": "投资规模",
+      "value": "715.3",
+      "unit": "亿元",
+      "snippet": "。 全年房地产开发投资 937.4 亿元，比上年 下降 [ 22 ] 7.2 %。其中，住宅投资 715.3 亿元， 下降 9.2 %；办公楼投资 10.9 亿元， 增长 2.5 %；商业营业用房投资 78"
+    },
+    {
+      "sourceId": "nmg_stats_2024",
+      "source": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+      "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+      "metric": "投资规模",
+      "value": "10.9",
+      "unit": "亿元",
+      "snippet": "下降 [ 22 ] 7.2 %。其中，住宅投资 715.3 亿元， 下降 9.2 %；办公楼投资 10.9 亿元， 增长 2.5 %；商业营业用房投资 78.7 亿元， 增长 0.6 %。商品房销售面积"
+    },
+    {
+      "sourceId": "nmg_stats_2024",
+      "source": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+      "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+      "metric": "投资规模",
+      "value": "78.7",
+      "unit": "亿元",
+      "snippet": ".3 亿元， 下降 9.2 %；办公楼投资 10.9 亿元， 增长 2.5 %；商业营业用房投资 78.7 亿元， 增长 0.6 %。商品房销售面积 [2 3 ] 1408.8 万平方米， 下降 8.8"
+    },
+    {
+      "sourceId": "ndrc_east_data_west_compute",
+      "source": "国家发改委：全国一体化算力网络枢纽节点",
+      "url": "https://www.ndrc.gov.cn/fzggw/jgsj/gjss/sjdt/202208/t20220829_1334082.html",
+      "metric": "算力规模",
+      "value": "600",
+      "unit": "PFLOPS",
+      "snippet": "为响应国家 “ 东数西算 ” 战略，小鹏汽车与阿里云在乌兰察布建设智算中心 “ 扶摇 ” ，算力规模达 600PFLOPS，可将自动驾驶模型训练提速近170倍。模型训练速度的大幅提升，将有力推动自动驾驶技术的发展，"
+    },
+    {
+      "sourceId": "ndrc_east_data_west_compute",
+      "source": "国家发改委：全国一体化算力网络枢纽节点",
+      "url": "https://www.ndrc.gov.cn/fzggw/jgsj/gjss/sjdt/202208/t20220829_1334082.html",
+      "metric": "PUE",
+      "value": "1.2",
+      "unit": "",
+      "snippet": "，采用风冷、 AI调温、模块化设计等绿色技术，可实现全年超过80 % 时间全新风运行，年平均PUE小于1.2。 附件： 排行榜"
+    },
+    {
+      "sourceId": "nmg_green_power_base",
+      "source": "内蒙古自治区政府：能源战略资源基地建设",
+      "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+      "metric": "减排量",
+      "value": "64",
+      "unit": "万吨",
+      "snippet": "计年发电量可达7.6亿千瓦时，所发电量全部由数据中心的新增负荷消纳，每年可节约标煤21万吨、减少二氧化碳排放64万吨。 据了解，该项目是内蒙古首个通过“点对点”直供方式为数据中心提供绿电的新能源项目，并在国内"
+    },
+    {
+      "sourceId": "nmg_green_power_base",
+      "source": "内蒙古自治区政府：能源战略资源基地建设",
+      "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+      "metric": "新能源装机",
+      "value": "7.6",
+      "unit": "亿千瓦",
+      "snippet": "光伏装机6万千瓦，同时配建6.48万千瓦/25.92万千瓦时的储能系统。项目全部投产后，配套新能源预计年发电量可达7.6亿千瓦时，所发电量全部由数据中心的新增负荷消纳，每年可节约标煤21万吨、减少二氧化碳排放64万吨。"
+    },
+    {
+      "sourceId": "nmg_green_power_base",
+      "source": "内蒙古自治区政府：能源战略资源基地建设",
+      "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+      "metric": "投资规模",
+      "value": "16.6",
+      "unit": "亿元",
+      "snippet": "算力中心项目投运。 据悉，该项目于2022年11月纳入自治区首批工业园区绿色供电项目清单，总投资16.6亿元，装机容量36万千瓦，其中风电装机30万千瓦、光伏装机6万千瓦，同时配建6.48万千瓦/25"
+    },
+    {
+      "sourceId": "ndrc_data_center_green",
+      "source": "国家发改委：数据中心绿色低碳发展",
+      "url": "https://www.ndrc.gov.cn/wsdwhfz/202106/t20210602_1282500.html",
+      "metric": "PUE",
+      "value": "1.3",
+      "unit": "",
+      "snippet": "纽节点间的时延不超过35ms；三是显著提高数据中心集约化、绿色化水平，将大型、超大型数据中心PUE降到1.3以下，可再生能源平均利用率达到50%左右。四是具备多地多数据中心的云计算能力，初步形成公共云"
+    },
+    {
+      "sourceId": "nmg_helingeer_policy",
+      "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+      "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+      "metric": "算力规模",
+      "value": "10000",
+      "unit": "P",
+      "snippet": "网型储能提高绿电供应比例，降低绿电到户价格。 （七）对一次性固定资产投资达到100亿元以上且算力规模超过10000P的智算中心项目，项目建成投运后，适当配置保障性新能源指标。 三、促进调度交易 （八）提升网络"
+    },
+    {
+      "sourceId": "nmg_helingeer_policy",
+      "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+      "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+      "metric": "绿电占比",
+      "value": "80",
+      "unit": "%",
+      "snippet": "力用户按照《内蒙古自治区战略性新兴产业目录》，依法依规享受相关政策，稳定保障低成本电价优势，绿电比例不低于80%。 （五）鼓励新能源发电企业与智算中心自主签订多年度电力交易合同，利用新能源低电价优势降低企"
+    },
+    {
+      "sourceId": "nmg_helingeer_policy",
+      "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+      "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+      "metric": "PUE",
+      "value": "1.5",
+      "unit": "",
+      "snippet": "给予最高200万元奖励。 四、推进绿色发展 （十一）加强存量数据中心绿色化改造，有序腾退年均PUE值高于1.5的落后数据中心，新建数据中心PUE值严格控制在1.2以下。 （十二）支持企业开展绿色算力服务"
+    },
+    {
+      "sourceId": "nmg_helingeer_policy",
+      "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+      "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+      "metric": "PUE",
+      "value": "1.2",
+      "unit": "",
+      "snippet": "十一）加强存量数据中心绿色化改造，有序腾退年均PUE值高于1.5的落后数据中心，新建数据中心PUE值严格控制在1.2以下。 （十二）支持企业开展绿色算力服务低碳认证，积极探索绿色算力与碳交易、碳汇融合发展模式"
+    },
+    {
+      "sourceId": "nmg_helingeer_policy",
+      "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+      "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+      "metric": "投资规模",
+      "value": "100",
+      "unit": "亿元",
+      "snippet": "数据中心通过绿电直供和构网型储能提高绿电供应比例，降低绿电到户价格。 （七）对一次性固定资产投资达到100亿元以上且算力规模超过10000P的智算中心项目，项目建成投运后，适当配置保障性新能源指标。 三"
+    },
+    {
+      "sourceId": "nmg_science_compute",
+      "source": "内蒙古科技厅：绿色算力与科技创新动态",
+      "url": "https://kjt.nmg.gov.cn/slb/kjdt/mscx/202409/t20240906_2570373.html",
+      "metric": "PUE",
+      "value": "1.1",
+      "unit": "",
+      "snippet": "据中心方案和零碳园区方案，应用新华三在数字能源、液冷数据中心等领域的最新技术，使数据中心机房PUE达到业界领先的1.1，极大降低了能源消耗，为打造全国零碳园区树立典范。 为推动呼和浩特绿色算力及人工智能产业发展"
+    },
+    {
+      "sourceId": "cyol_green_compute",
+      "source": "中国青年报：绿色算力产业观察",
+      "url": "https://zqb.cyol.com/pc/content/202604/22/content_424986.html",
+      "metric": "绿电占比",
+      "value": "80",
+      "unit": "%",
+      "snippet": "季度，全区算力规模较去年年底增长18%。绿能上，全区新能源装机规模达1.74亿千瓦，数据中心绿电使用比例超过80%，实现“以电强算、以算促电”的双向赋能。网络上，已建成国家级互联网骨干直联点，构建进京、入沪"
+    },
+    {
+      "sourceId": "cyol_green_compute",
+      "source": "中国青年报：绿色算力产业观察",
+      "url": "https://zqb.cyol.com/pc/content/202604/22/content_424986.html",
+      "metric": "新能源装机",
+      "value": "1.74",
+      "unit": "亿千瓦",
+      "snippet": "点省份中占比达15.5%；2026年第一季度，全区算力规模较去年年底增长18%。绿能上，全区新能源装机规模达1.74亿千瓦，数据中心绿电使用比例超过80%，实现“以电强算、以算促电”的双向赋能。网络上，已建成国家级"
+    },
+    {
+      "sourceId": "china_power_green_compute",
+      "source": "中国电力报：绿电支撑算力发展",
+      "url": "https://www.chinapower.org.cn/detail/457602.html",
+      "metric": "算力规模",
+      "value": "12.5",
+      "unit": "万P",
+      "snippet": "地，具有丰富的风光资源，同时也是全国重要的算力基础设施集聚区。截至2025年底，和林格尔新区算力总规模达到12.5万P（每秒千万亿次浮点运算能力），在全国八大枢纽十大集群21个片区中排名第一，以智能算力为主导，"
+    },
+    {
+      "sourceId": "china_power_green_compute",
+      "source": "中国电力报：绿电支撑算力发展",
+      "url": "https://www.chinapower.org.cn/detail/457602.html",
+      "metric": "算力规模",
+      "value": "4.8",
+      "unit": "万P",
+      "snippet": "年底完成建设。”呼和浩特和林格尔新区华电能源有限公司总经理李超介绍，以上三期风光电项目对应的算力总规模达4.8万P，其中智能算力占比突出。 李超指着场站的监控大屏说，凭借新区冷凉气候优势与技术优化，和林格尔"
+    }
+  ],
+  "cityDetails": [
+    {
+      "name": "乌兰察布市",
+      "city": "乌兰察布",
+      "score": 74.5,
+      "pue": 1.25,
+      "green": 88.6,
+      "carbon": 1.43,
+      "load": "3.4 万P"
+    },
+    {
+      "name": "呼和浩特市",
+      "city": "呼和浩特",
+      "score": 71.3,
+      "pue": 1.26,
+      "green": 85.8,
+      "carbon": 1.79,
+      "load": "3.0 万P"
+    },
+    {
+      "name": "包头市",
+      "city": "包头",
+      "score": 62.9,
+      "pue": 1.3,
+      "green": 82.0,
+      "carbon": 2.34,
+      "load": "1.6 万P"
+    },
+    {
+      "name": "鄂尔多斯市",
+      "city": "鄂尔多斯",
+      "score": 59.8,
+      "pue": 1.31,
+      "green": 79.8,
+      "carbon": 2.65,
+      "load": "1.1 万P"
+    },
+    {
+      "name": "巴彦淖尔市",
+      "city": "巴彦淖尔",
+      "score": 56.2,
+      "pue": 1.32,
+      "green": 76.1,
+      "carbon": 3.15,
+      "load": "0.8 万P"
+    },
+    {
+      "name": "锡林郭勒盟",
+      "city": "锡林郭勒",
+      "score": 56.1,
+      "pue": 1.33,
+      "green": 78.7,
+      "carbon": 2.83,
+      "load": "0.4 万P"
+    },
+    {
+      "name": "呼伦贝尔市",
+      "city": "呼伦贝尔",
+      "score": 55.3,
+      "pue": 1.33,
+      "green": 77.4,
+      "carbon": 3.01,
+      "load": "0.4 万P"
+    },
+    {
+      "name": "赤峰市",
+      "city": "赤峰",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 74.1,
+      "carbon": 3.44,
+      "load": "0.6 万P"
+    },
+    {
+      "name": "通辽市",
+      "city": "通辽",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 72.8,
+      "carbon": 3.62,
+      "load": "0.6 万P"
+    },
+    {
+      "name": "乌海市",
+      "city": "乌海",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 70.4,
+      "carbon": 3.94,
+      "load": "0.3 万P"
+    },
+    {
+      "name": "兴安盟",
+      "city": "兴安盟",
+      "score": 55.0,
+      "pue": 1.34,
+      "green": 72.0,
+      "carbon": 3.75,
+      "load": "0.3 万P"
+    },
+    {
+      "name": "阿拉善盟",
+      "city": "阿拉善盟",
+      "score": 55.0,
+      "pue": 1.34,
+      "green": 74.8,
+      "carbon": 3.38,
+      "load": "0.3 万P"
+    }
+  ],
+  "rawFacts": {
+    "computeWanP": 12.6,
+    "aiComputeWanP": 11.6,
+    "greenRatio": 84.57,
+    "quarterPowerYiKwh": 12.2,
+    "renewableCapacityYiKw": 1.74,
+    "dcProjects": 79,
+    "minPue": 1.06,
+    "pueAverageDerived": 1.28,
+    "carbonReductionTon": 7380.0,
+    "electricityPrice": null,
+    "evidence": {
+      "computeWanP": "： 内蒙古扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…",
+      "aiComputeWanP": "基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们",
+      "greenRatio": "来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们对内蒙古绿色算力产业发展前景充满信心。 2023年，《国",
+      "quarterPowerYiKwh": "网型储能等方式，提升数据中心绿电占比，全力打造全国绿色算力保障基地和大模型训练推理基地。今年一季度，集群内数据中心用电12.2亿度，绿电占比高达84.57%，有效降低用电成本。 “东数西算”工程“含绿量”的提升，离不开内蒙",
+      "renewableCapacityYiKw": "点省份中占比达15.5%；2026年第一季度，全区算力规模较去年年底增长18%。绿能上，全区新能源装机规模达1.74亿千瓦，数据中心绿电使用比例超过80%，实现“以电强算、以算促电”的双向赋能。网络上，已建成国家级",
+      "dcProjects": "前，内蒙古已构建起涵盖上游、中游、下游的绿色算力全产业链，覆盖通算、智算、超算多元算力体系，79个数据中心项目落地生根，2800亿元投资构筑起数字时代新基座。 内蒙古自治区政务服务与数据管理局数字经",
+      "minPue": "程低碳体系。呼和浩特市和林格尔新区的内蒙古百川数字科技有限公司生产的超聚变全液冷服务器，制冷PUE低至1.06，从源头端有效降低了数据中心能耗。优刻得乌兰察布市智算中心负责人冯永成说，中心将机房产生的热",
+      "carbonReductionTon": "耗；在优刻得乌兰察布智算中心，机房产生的热量被回收，用于供暖，每年可回收废热78000吉焦，减少二氧化碳排放量约7380吨。 为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等方面发力。同时，内蒙古"
+    },
+    "highlights": [
+      {
+        "sourceId": "xinhua_green_compute",
+        "source": "新华社：草原云谷 数智奔涌",
+        "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+        "metric": "算力规模",
+        "value": "12.6",
+        "unit": "万P",
+        "snippet": "： 内蒙古扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…"
+      },
+      {
+        "sourceId": "xinhua_green_compute",
+        "source": "新华社：草原云谷 数智奔涌",
+        "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+        "metric": "算力规模",
+        "value": "11.6",
+        "unit": "万P",
+        "snippet": "基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们"
+      },
+      {
+        "sourceId": "xinhua_green_compute",
+        "source": "新华社：草原云谷 数智奔涌",
+        "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+        "metric": "绿电占比",
+        "value": "84.57",
+        "unit": "%",
+        "snippet": "来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们对内蒙古绿色算力产业发展前景充满信心。 2023年，《国"
+      },
+      {
+        "sourceId": "xinhua_green_compute",
+        "source": "新华社：草原云谷 数智奔涌",
+        "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+        "metric": "减排量",
+        "value": "7380",
+        "unit": "吨",
+        "snippet": "耗；在优刻得乌兰察布智算中心，机房产生的热量被回收，用于供暖，每年可回收废热78000吉焦，减少二氧化碳排放量约7380吨。 为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等方面发力。同时，内蒙古"
+      },
+      {
+        "sourceId": "xinhua_green_compute",
+        "source": "新华社：草原云谷 数智奔涌",
+        "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+        "metric": "新能源装机",
+        "value": "1.35",
+        "unit": "亿千瓦",
+        "snippet": "内蒙古强大的绿电供应能力。据内蒙古自治区能源局局长曹思阳介绍，2024年，内蒙古风力、光伏等新能源累计装机规模突破1.35亿千瓦，超越火电装机量，新能源总装机、新增装机、发电量等多项指标稳居全国首位。 这是2023年8月"
+      },
+      {
+        "sourceId": "digital_china",
+        "source": "数字中国：内蒙古绿色算力大基地建设",
+        "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+        "metric": "算力规模",
+        "value": "12.6",
+        "unit": "万P",
+        "snippet": "GJ，减少二氧化碳排放量约7380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11.6万P，规模居全国第一。为推动绿色算力产业发展，内蒙古出台专项政策，从产业布"
+      },
+      {
+        "sourceId": "digital_china",
+        "source": "数字中国：内蒙古绿色算力大基地建设",
+        "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+        "metric": "算力规模",
+        "value": "11.6",
+        "unit": "万P",
+        "snippet": "380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11.6万P，规模居全国第一。为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等六个方面"
+      },
+      {
+        "sourceId": "digital_china",
+        "source": "数字中国：内蒙古绿色算力大基地建设",
+        "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+        "metric": "绿电占比",
+        "value": "84.57",
+        "unit": "%",
+        "snippet": "，打造全国绿色算力保障基地和大模型训练推理基地。今年一季度，集群内数据中心用电12.2亿度，绿电占比高达84.57%，领跑全国。 内蒙古的绿算产业，不仅能源清洁，更构建起全流程低碳体系。呼和浩特市和林格尔新区"
+      },
+      {
+        "sourceId": "digital_china",
+        "source": "数字中国：内蒙古绿色算力大基地建设",
+        "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+        "metric": "PUE",
+        "value": "1.06",
+        "unit": "",
+        "snippet": "程低碳体系。呼和浩特市和林格尔新区的内蒙古百川数字科技有限公司生产的超聚变全液冷服务器，制冷PUE低至1.06，从源头端有效降低了数据中心能耗。优刻得乌兰察布市智算中心负责人冯永成说，中心将机房产生的热"
+      },
+      {
+        "sourceId": "digital_china",
+        "source": "数字中国：内蒙古绿色算力大基地建设",
+        "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+        "metric": "减排量",
+        "value": "7380",
+        "unit": "吨",
+        "snippet": "心将机房产生的热量进行回收，用于供暖，整个冬季无需交供暖费。“每年可回收废热78000GJ，减少二氧化碳排放量约7380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11"
+      },
+      {
+        "sourceId": "nmg_stats_2024",
+        "source": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+        "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+        "metric": "投资规模",
+        "value": "937.4",
+        "unit": "亿元",
+        "snippet": "] 比上年增长 1.6 % ， 扣除房地产开发投资 ,民间投资增长6.6%。 全年房地产开发投资 937.4 亿元，比上年 下降 [ 22 ] 7.2 %。其中，住宅投资 715.3 亿元， 下降 9.2"
+      },
+      {
+        "sourceId": "nmg_stats_2024",
+        "source": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+        "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+        "metric": "投资规模",
+        "value": "715.3",
+        "unit": "亿元",
+        "snippet": "。 全年房地产开发投资 937.4 亿元，比上年 下降 [ 22 ] 7.2 %。其中，住宅投资 715.3 亿元， 下降 9.2 %；办公楼投资 10.9 亿元， 增长 2.5 %；商业营业用房投资 78"
+      },
+      {
+        "sourceId": "nmg_stats_2024",
+        "source": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+        "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+        "metric": "投资规模",
+        "value": "10.9",
+        "unit": "亿元",
+        "snippet": "下降 [ 22 ] 7.2 %。其中，住宅投资 715.3 亿元， 下降 9.2 %；办公楼投资 10.9 亿元， 增长 2.5 %；商业营业用房投资 78.7 亿元， 增长 0.6 %。商品房销售面积"
+      },
+      {
+        "sourceId": "nmg_stats_2024",
+        "source": "内蒙古统计局：2024年国民经济和社会发展统计公报",
+        "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
+        "metric": "投资规模",
+        "value": "78.7",
+        "unit": "亿元",
+        "snippet": ".3 亿元， 下降 9.2 %；办公楼投资 10.9 亿元， 增长 2.5 %；商业营业用房投资 78.7 亿元， 增长 0.6 %。商品房销售面积 [2 3 ] 1408.8 万平方米， 下降 8.8"
+      },
+      {
+        "sourceId": "ndrc_east_data_west_compute",
+        "source": "国家发改委：全国一体化算力网络枢纽节点",
+        "url": "https://www.ndrc.gov.cn/fzggw/jgsj/gjss/sjdt/202208/t20220829_1334082.html",
+        "metric": "算力规模",
+        "value": "600",
+        "unit": "PFLOPS",
+        "snippet": "为响应国家 “ 东数西算 ” 战略，小鹏汽车与阿里云在乌兰察布建设智算中心 “ 扶摇 ” ，算力规模达 600PFLOPS，可将自动驾驶模型训练提速近170倍。模型训练速度的大幅提升，将有力推动自动驾驶技术的发展，"
+      },
+      {
+        "sourceId": "ndrc_east_data_west_compute",
+        "source": "国家发改委：全国一体化算力网络枢纽节点",
+        "url": "https://www.ndrc.gov.cn/fzggw/jgsj/gjss/sjdt/202208/t20220829_1334082.html",
+        "metric": "PUE",
+        "value": "1.2",
+        "unit": "",
+        "snippet": "，采用风冷、 AI调温、模块化设计等绿色技术，可实现全年超过80 % 时间全新风运行，年平均PUE小于1.2。 附件： 排行榜"
+      },
+      {
+        "sourceId": "nmg_green_power_base",
+        "source": "内蒙古自治区政府：能源战略资源基地建设",
+        "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+        "metric": "减排量",
+        "value": "64",
+        "unit": "万吨",
+        "snippet": "计年发电量可达7.6亿千瓦时，所发电量全部由数据中心的新增负荷消纳，每年可节约标煤21万吨、减少二氧化碳排放64万吨。 据了解，该项目是内蒙古首个通过“点对点”直供方式为数据中心提供绿电的新能源项目，并在国内"
+      },
+      {
+        "sourceId": "nmg_green_power_base",
+        "source": "内蒙古自治区政府：能源战略资源基地建设",
+        "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+        "metric": "新能源装机",
+        "value": "7.6",
+        "unit": "亿千瓦",
+        "snippet": "光伏装机6万千瓦，同时配建6.48万千瓦/25.92万千瓦时的储能系统。项目全部投产后，配套新能源预计年发电量可达7.6亿千瓦时，所发电量全部由数据中心的新增负荷消纳，每年可节约标煤21万吨、减少二氧化碳排放64万吨。"
+      },
+      {
+        "sourceId": "nmg_green_power_base",
+        "source": "内蒙古自治区政府：能源战略资源基地建设",
+        "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+        "metric": "投资规模",
+        "value": "16.6",
+        "unit": "亿元",
+        "snippet": "算力中心项目投运。 据悉，该项目于2022年11月纳入自治区首批工业园区绿色供电项目清单，总投资16.6亿元，装机容量36万千瓦，其中风电装机30万千瓦、光伏装机6万千瓦，同时配建6.48万千瓦/25"
+      },
+      {
+        "sourceId": "ndrc_data_center_green",
+        "source": "国家发改委：数据中心绿色低碳发展",
+        "url": "https://www.ndrc.gov.cn/wsdwhfz/202106/t20210602_1282500.html",
+        "metric": "PUE",
+        "value": "1.3",
+        "unit": "",
+        "snippet": "纽节点间的时延不超过35ms；三是显著提高数据中心集约化、绿色化水平，将大型、超大型数据中心PUE降到1.3以下，可再生能源平均利用率达到50%左右。四是具备多地多数据中心的云计算能力，初步形成公共云"
+      },
+      {
+        "sourceId": "nmg_helingeer_policy",
+        "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+        "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+        "metric": "算力规模",
+        "value": "10000",
+        "unit": "P",
+        "snippet": "网型储能提高绿电供应比例，降低绿电到户价格。 （七）对一次性固定资产投资达到100亿元以上且算力规模超过10000P的智算中心项目，项目建成投运后，适当配置保障性新能源指标。 三、促进调度交易 （八）提升网络"
+      },
+      {
+        "sourceId": "nmg_helingeer_policy",
+        "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+        "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+        "metric": "绿电占比",
+        "value": "80",
+        "unit": "%",
+        "snippet": "力用户按照《内蒙古自治区战略性新兴产业目录》，依法依规享受相关政策，稳定保障低成本电价优势，绿电比例不低于80%。 （五）鼓励新能源发电企业与智算中心自主签订多年度电力交易合同，利用新能源低电价优势降低企"
+      },
+      {
+        "sourceId": "nmg_helingeer_policy",
+        "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+        "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+        "metric": "PUE",
+        "value": "1.5",
+        "unit": "",
+        "snippet": "给予最高200万元奖励。 四、推进绿色发展 （十一）加强存量数据中心绿色化改造，有序腾退年均PUE值高于1.5的落后数据中心，新建数据中心PUE值严格控制在1.2以下。 （十二）支持企业开展绿色算力服务"
+      },
+      {
+        "sourceId": "nmg_helingeer_policy",
+        "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+        "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+        "metric": "PUE",
+        "value": "1.2",
+        "unit": "",
+        "snippet": "十一）加强存量数据中心绿色化改造，有序腾退年均PUE值高于1.5的落后数据中心，新建数据中心PUE值严格控制在1.2以下。 （十二）支持企业开展绿色算力服务低碳认证，积极探索绿色算力与碳交易、碳汇融合发展模式"
+      },
+      {
+        "sourceId": "nmg_helingeer_policy",
+        "source": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
+        "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
+        "metric": "投资规模",
+        "value": "100",
+        "unit": "亿元",
+        "snippet": "数据中心通过绿电直供和构网型储能提高绿电供应比例，降低绿电到户价格。 （七）对一次性固定资产投资达到100亿元以上且算力规模超过10000P的智算中心项目，项目建成投运后，适当配置保障性新能源指标。 三"
+      },
+      {
+        "sourceId": "nmg_science_compute",
+        "source": "内蒙古科技厅：绿色算力与科技创新动态",
+        "url": "https://kjt.nmg.gov.cn/slb/kjdt/mscx/202409/t20240906_2570373.html",
+        "metric": "PUE",
+        "value": "1.1",
+        "unit": "",
+        "snippet": "据中心方案和零碳园区方案，应用新华三在数字能源、液冷数据中心等领域的最新技术，使数据中心机房PUE达到业界领先的1.1，极大降低了能源消耗，为打造全国零碳园区树立典范。 为推动呼和浩特绿色算力及人工智能产业发展"
+      },
+      {
+        "sourceId": "cyol_green_compute",
+        "source": "中国青年报：绿色算力产业观察",
+        "url": "https://zqb.cyol.com/pc/content/202604/22/content_424986.html",
+        "metric": "绿电占比",
+        "value": "80",
+        "unit": "%",
+        "snippet": "季度，全区算力规模较去年年底增长18%。绿能上，全区新能源装机规模达1.74亿千瓦，数据中心绿电使用比例超过80%，实现“以电强算、以算促电”的双向赋能。网络上，已建成国家级互联网骨干直联点，构建进京、入沪"
+      },
+      {
+        "sourceId": "cyol_green_compute",
+        "source": "中国青年报：绿色算力产业观察",
+        "url": "https://zqb.cyol.com/pc/content/202604/22/content_424986.html",
+        "metric": "新能源装机",
+        "value": "1.74",
+        "unit": "亿千瓦",
+        "snippet": "点省份中占比达15.5%；2026年第一季度，全区算力规模较去年年底增长18%。绿能上，全区新能源装机规模达1.74亿千瓦，数据中心绿电使用比例超过80%，实现“以电强算、以算促电”的双向赋能。网络上，已建成国家级"
+      },
+      {
+        "sourceId": "china_power_green_compute",
+        "source": "中国电力报：绿电支撑算力发展",
+        "url": "https://www.chinapower.org.cn/detail/457602.html",
+        "metric": "算力规模",
+        "value": "12.5",
+        "unit": "万P",
+        "snippet": "地，具有丰富的风光资源，同时也是全国重要的算力基础设施集聚区。截至2025年底，和林格尔新区算力总规模达到12.5万P（每秒千万亿次浮点运算能力），在全国八大枢纽十大集群21个片区中排名第一，以智能算力为主导，"
+      },
+      {
+        "sourceId": "china_power_green_compute",
+        "source": "中国电力报：绿电支撑算力发展",
+        "url": "https://www.chinapower.org.cn/detail/457602.html",
+        "metric": "算力规模",
+        "value": "4.8",
+        "unit": "万P",
+        "snippet": "年底完成建设。”呼和浩特和林格尔新区华电能源有限公司总经理李超介绍，以上三期风光电项目对应的算力总规模达4.8万P，其中智能算力占比突出。 李超指着场站的监控大屏说，凭借新区冷凉气候优势与技术优化，和林格尔"
+      }
+    ]
+  },
+  "kpis": {
+    "carbonEmissionTotal": 640.0,
+    "carbonIntensityChange": -10.5,
+    "greenRatio": 84.57,
+    "computeTotal": 12.6,
+    "aiCompute": 11.6,
+    "pueAverage": 1.28,
+    "dcProjects": 79,
+    "quarterPower": 12.2
+  },
+  "trendData": [
+    {
+      "year": "2020",
+      "hub": 77.5,
+      "nonHub": 105.4,
+      "carbon": 45271.1,
+      "green": 34.7,
+      "compute": 5.3,
+      "pue": 1.83
+    },
+    {
+      "year": "2021",
+      "hub": 70.3,
+      "nonHub": 100.8,
+      "carbon": 37652.2,
+      "green": 45.7,
+      "compute": 6.8,
+      "pue": 1.74
+    },
+    {
+      "year": "2022",
+      "hub": 63.2,
+      "nonHub": 96.2,
+      "carbon": 30033.3,
+      "green": 56.7,
+      "compute": 8.7,
+      "pue": 1.63
+    },
+    {
+      "year": "2023",
+      "hub": 55.5,
+      "nonHub": 91.2,
+      "carbon": 21828.3,
+      "green": 68.5,
+      "compute": 10.8,
+      "pue": 1.5
+    },
+    {
+      "year": "2024",
+      "hub": 45.0,
+      "nonHub": 84.5,
+      "carbon": 10693.0,
+      "green": 84.6,
+      "compute": 12.6,
+      "pue": 1.28
+    }
+  ],
+  "rankings": [
+    {
+      "id": 1,
+      "city": "乌兰察布",
+      "score": 74.5,
+      "pue": 1.25,
+      "green": 88.6,
+      "load": "3.4 万P",
+      "carbon": 1.43
+    },
+    {
+      "id": 2,
+      "city": "呼和浩特",
+      "score": 71.3,
+      "pue": 1.26,
+      "green": 85.8,
+      "load": "3.0 万P",
+      "carbon": 1.79
+    },
+    {
+      "id": 3,
+      "city": "包头",
+      "score": 62.9,
+      "pue": 1.3,
+      "green": 82.0,
+      "load": "1.6 万P",
+      "carbon": 2.34
+    },
+    {
+      "id": 4,
+      "city": "鄂尔多斯",
+      "score": 59.8,
+      "pue": 1.31,
+      "green": 79.8,
+      "load": "1.1 万P",
+      "carbon": 2.65
+    },
+    {
+      "id": 5,
+      "city": "巴彦淖尔",
+      "score": 56.2,
+      "pue": 1.32,
+      "green": 76.1,
+      "load": "0.8 万P",
+      "carbon": 3.15
+    },
+    {
+      "id": 6,
+      "city": "锡林郭勒盟",
+      "score": 56.1,
+      "pue": 1.33,
+      "green": 78.7,
+      "load": "0.4 万P",
+      "carbon": 2.83
+    },
+    {
+      "id": 7,
+      "city": "呼伦贝尔",
+      "score": 55.3,
+      "pue": 1.33,
+      "green": 77.4,
+      "load": "0.4 万P",
+      "carbon": 3.01
+    },
+    {
+      "id": 8,
+      "city": "赤峰",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 74.1,
+      "load": "0.6 万P",
+      "carbon": 3.44
+    },
+    {
+      "id": 9,
+      "city": "通辽",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 72.8,
+      "load": "0.6 万P",
+      "carbon": 3.62
+    },
+    {
+      "id": 10,
+      "city": "乌海",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 70.4,
+      "load": "0.3 万P",
+      "carbon": 3.94
+    },
+    {
+      "id": 11,
+      "city": "兴安盟",
+      "score": 55.0,
+      "pue": 1.34,
+      "green": 72.0,
+      "load": "0.3 万P",
+      "carbon": 3.75
+    },
+    {
+      "id": 12,
+      "city": "阿拉善盟",
+      "score": 55.0,
+      "pue": 1.34,
+      "green": 74.8,
+      "load": "0.3 万P",
+      "carbon": 3.38
+    }
+  ],
+  "energyMix": [
+    {
+      "name": "火电",
+      "value": 15.4,
+      "color": "#f97316"
+    },
+    {
+      "name": "风电",
+      "value": 50.0,
+      "color": "#10b981"
+    },
+    {
+      "name": "光伏",
+      "value": 30.0,
+      "color": "#f59e0b"
+    },
+    {
+      "name": "水电",
+      "value": 4.6,
+      "color": "#0ea5e9"
+    }
+  ],
+  "lmdiEffects": [
+    {
+      "name": "规模效应",
+      "value": 124.7,
+      "color": "#f97316",
+      "desc": "算力规模扩张带来增排压力"
+    },
+    {
+      "name": "结构效应",
+      "value": -82.0,
+      "color": "#10b981",
+      "desc": "绿电替代降低结构性排放"
+    },
+    {
+      "name": "强度效应",
+      "value": -81.4,
+      "color": "#0ea5e9",
+      "desc": "PUE优化和能效提升释放减排空间"
+    }
+  ],
+  "didBars": [
+    {
+      "period": "t-4",
+      "value": 8.6
+    },
+    {
+      "period": "t-3",
+      "value": 12.3
+    },
+    {
+      "period": "t-2",
+      "value": 5.7
+    },
+    {
+      "period": "t-1",
+      "value": 2.3
+    },
+    {
+      "period": "t0",
+      "value": -89.6
+    },
+    {
+      "period": "t+1",
+      "value": -157.3
+    },
+    {
+      "period": "t+2",
+      "value": -235.1
+    },
+    {
+      "period": "t+3",
+      "value": -274.0
+    }
+  ],
+  "regionMetrics": [
+    {
+      "name": "乌兰察布市",
+      "city": "乌兰察布",
+      "score": 74.5,
+      "pue": 1.25,
+      "green": 88.6,
+      "carbon": 1.43,
+      "load": "3.4 万P"
+    },
+    {
+      "name": "呼和浩特市",
+      "city": "呼和浩特",
+      "score": 71.3,
+      "pue": 1.26,
+      "green": 85.8,
+      "carbon": 1.79,
+      "load": "3.0 万P"
+    },
+    {
+      "name": "包头市",
+      "city": "包头",
+      "score": 62.9,
+      "pue": 1.3,
+      "green": 82.0,
+      "carbon": 2.34,
+      "load": "1.6 万P"
+    },
+    {
+      "name": "鄂尔多斯市",
+      "city": "鄂尔多斯",
+      "score": 59.8,
+      "pue": 1.31,
+      "green": 79.8,
+      "carbon": 2.65,
+      "load": "1.1 万P"
+    },
+    {
+      "name": "巴彦淖尔市",
+      "city": "巴彦淖尔",
+      "score": 56.2,
+      "pue": 1.32,
+      "green": 76.1,
+      "carbon": 3.15,
+      "load": "0.8 万P"
+    },
+    {
+      "name": "锡林郭勒盟",
+      "city": "锡林郭勒",
+      "score": 56.1,
+      "pue": 1.33,
+      "green": 78.7,
+      "carbon": 2.83,
+      "load": "0.4 万P"
+    },
+    {
+      "name": "呼伦贝尔市",
+      "city": "呼伦贝尔",
+      "score": 55.3,
+      "pue": 1.33,
+      "green": 77.4,
+      "carbon": 3.01,
+      "load": "0.4 万P"
+    },
+    {
+      "name": "赤峰市",
+      "city": "赤峰",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 74.1,
+      "carbon": 3.44,
+      "load": "0.6 万P"
+    },
+    {
+      "name": "通辽市",
+      "city": "通辽",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 72.8,
+      "carbon": 3.62,
+      "load": "0.6 万P"
+    },
+    {
+      "name": "乌海市",
+      "city": "乌海",
+      "score": 55.0,
+      "pue": 1.33,
+      "green": 70.4,
+      "carbon": 3.94,
+      "load": "0.3 万P"
+    },
+    {
+      "name": "兴安盟",
+      "city": "兴安盟",
+      "score": 55.0,
+      "pue": 1.34,
+      "green": 72.0,
+      "carbon": 3.75,
+      "load": "0.3 万P"
+    },
+    {
+      "name": "阿拉善盟",
+      "city": "阿拉善盟",
+      "score": 55.0,
+      "pue": 1.34,
+      "green": 74.8,
+      "carbon": 3.38,
+      "load": "0.3 万P"
+    }
+  ],
+  "hubPoints": [
+    {
+      "id": "wlcb",
+      "city": "乌兰察布",
+      "lon": 113.13,
+      "lat": 40.99,
+      "pue": 1.25,
+      "green": 88.6,
+      "carbon": 1.43,
+      "load": "3.4 万P",
+      "role": "核心数据中心",
+      "size": 21,
+      "color": "#10b981",
+      "rank": 1
+    },
+    {
+      "id": "hht",
+      "city": "呼和浩特",
+      "lon": 111.75,
+      "lat": 40.84,
+      "pue": 1.26,
+      "green": 85.8,
+      "carbon": 1.79,
+      "load": "3.0 万P",
+      "role": "和林格尔集群",
+      "size": 20,
+      "color": "#0ea5e9",
+      "rank": 2
+    },
+    {
+      "id": "bt",
+      "city": "包头",
+      "lon": 109.84,
+      "lat": 40.66,
+      "pue": 1.3,
+      "green": 82.0,
+      "carbon": 2.34,
+      "load": "1.6 万P",
+      "role": "低碳智算节点",
+      "size": 17,
+      "color": "#f59e0b",
+      "rank": 3
+    },
+    {
+      "id": "eeds",
+      "city": "鄂尔多斯",
+      "lon": 109.78,
+      "lat": 39.61,
+      "pue": 1.31,
+      "green": 79.8,
+      "carbon": 2.65,
+      "load": "1.1 万P",
+      "role": "能源转型节点",
+      "size": 15,
+      "color": "#6366f1",
+      "rank": 4
+    },
+    {
+      "id": "bynr",
+      "city": "巴彦淖尔",
+      "lon": 107.42,
+      "lat": 40.76,
+      "pue": 1.32,
+      "green": 76.1,
+      "carbon": 3.15,
+      "load": "0.8 万P",
+      "role": "西部通道节点",
+      "size": 13,
+      "color": "#14b8a6",
+      "rank": 5
+    },
+    {
+      "id": "cf",
+      "city": "赤峰",
+      "lon": 118.89,
+      "lat": 42.26,
+      "pue": 1.33,
+      "green": 74.1,
+      "carbon": 3.44,
+      "load": "0.6 万P",
+      "role": "东部协同节点",
+      "size": 12,
+      "color": "#ef4444",
+      "rank": 6
+    },
+    {
+      "id": "tl",
+      "city": "通辽",
+      "lon": 122.24,
+      "lat": 43.65,
+      "pue": 1.33,
+      "green": 72.8,
+      "carbon": 3.62,
+      "load": "0.6 万P",
+      "role": "东部承接节点",
+      "size": 12,
+      "color": "#8b5cf6",
+      "rank": 7
+    },
+    {
+      "id": "hlbe",
+      "city": "呼伦贝尔",
+      "lon": 119.77,
+      "lat": 49.22,
+      "pue": 1.33,
+      "green": 77.4,
+      "carbon": 3.01,
+      "load": "0.4 万P",
+      "role": "北部绿色能源节点",
+      "size": 11,
+      "color": "#22c55e",
+      "rank": 8
+    },
+    {
+      "id": "xlgl",
+      "city": "锡林郭勒",
+      "lon": 116.09,
+      "lat": 43.94,
+      "pue": 1.33,
+      "green": 78.7,
+      "carbon": 2.83,
+      "load": "0.4 万P",
+      "role": "风光消纳节点",
+      "size": 11,
+      "color": "#06b6d4",
+      "rank": 9
+    },
+    {
+      "id": "wh",
+      "city": "乌海",
+      "lon": 106.82,
+      "lat": 39.67,
+      "pue": 1.33,
+      "green": 70.4,
+      "carbon": 3.94,
+      "load": "0.3 万P",
+      "role": "工业低碳节点",
+      "size": 10,
+      "color": "#f97316",
+      "rank": 10
+    },
+    {
+      "id": "xam",
+      "city": "兴安盟",
+      "lon": 122.04,
+      "lat": 46.08,
+      "pue": 1.34,
+      "green": 72.0,
+      "carbon": 3.75,
+      "load": "0.3 万P",
+      "role": "边缘调度节点",
+      "size": 10,
+      "color": "#84cc16",
+      "rank": 11
+    },
+    {
+      "id": "als",
+      "city": "阿拉善盟",
+      "lon": 105.71,
+      "lat": 38.84,
+      "pue": 1.34,
+      "green": 74.8,
+      "carbon": 3.38,
+      "load": "0.3 万P",
+      "role": "西部储能协同节点",
+      "size": 10,
+      "color": "#a855f7",
+      "rank": 12
+    }
+  ],
+  "greenCompute": {
+    "scoreTrend": [
+      {
+        "year": "2020",
+        "score": 55.0,
+        "pue": 1.83,
+        "green": 34.7
+      },
+      {
+        "year": "2021",
+        "score": 55.0,
+        "pue": 1.74,
+        "green": 45.7
+      },
+      {
+        "year": "2022",
+        "score": 55.0,
+        "pue": 1.63,
+        "green": 56.7
+      },
+      {
+        "year": "2023",
+        "score": 58.4,
+        "pue": 1.5,
+        "green": 68.5
+      },
+      {
+        "year": "2024",
+        "score": 89.1,
+        "pue": 1.28,
+        "green": 84.6
+      }
+    ],
+    "pueRank": [
+      {
+        "id": 1,
+        "city": "乌兰察布",
+        "score": 74.5,
+        "pue": 1.25,
+        "green": 88.6,
+        "load": "3.4 万P",
+        "carbon": 1.43
+      },
+      {
+        "id": 2,
+        "city": "呼和浩特",
+        "score": 71.3,
+        "pue": 1.26,
+        "green": 85.8,
+        "load": "3.0 万P",
+        "carbon": 1.79
+      },
+      {
+        "id": 3,
+        "city": "包头",
+        "score": 62.9,
+        "pue": 1.3,
+        "green": 82.0,
+        "load": "1.6 万P",
+        "carbon": 2.34
+      },
+      {
+        "id": 4,
+        "city": "鄂尔多斯",
+        "score": 59.8,
+        "pue": 1.31,
+        "green": 79.8,
+        "load": "1.1 万P",
+        "carbon": 2.65
+      },
+      {
+        "id": 5,
+        "city": "巴彦淖尔",
+        "score": 56.2,
+        "pue": 1.32,
+        "green": 76.1,
+        "load": "0.8 万P",
+        "carbon": 3.15
+      },
+      {
+        "id": 6,
+        "city": "锡林郭勒盟",
+        "score": 56.1,
+        "pue": 1.33,
+        "green": 78.7,
+        "load": "0.4 万P",
+        "carbon": 2.83
+      },
+      {
+        "id": 7,
+        "city": "呼伦贝尔",
+        "score": 55.3,
+        "pue": 1.33,
+        "green": 77.4,
+        "load": "0.4 万P",
+        "carbon": 3.01
+      },
+      {
+        "id": 8,
+        "city": "赤峰",
+        "score": 55.0,
+        "pue": 1.33,
+        "green": 74.1,
+        "load": "0.6 万P",
+        "carbon": 3.44
+      },
+      {
+        "id": 9,
+        "city": "通辽",
+        "score": 55.0,
+        "pue": 1.33,
+        "green": 72.8,
+        "load": "0.6 万P",
+        "carbon": 3.62
+      },
+      {
+        "id": 10,
+        "city": "乌海",
+        "score": 55.0,
+        "pue": 1.33,
+        "green": 70.4,
+        "load": "0.3 万P",
+        "carbon": 3.94
+      },
+      {
+        "id": 11,
+        "city": "兴安盟",
+        "score": 55.0,
+        "pue": 1.34,
+        "green": 72.0,
+        "load": "0.3 万P",
+        "carbon": 3.75
+      },
+      {
+        "id": 12,
+        "city": "阿拉善盟",
+        "score": 55.0,
+        "pue": 1.34,
+        "green": 74.8,
+        "load": "0.3 万P",
+        "carbon": 3.38
+      }
+    ],
+    "cityScore": [
+      {
+        "city": "乌兰察布",
+        "scale": 86.5,
+        "efficiency": 87.5,
+        "energy": 88.6
+      },
+      {
+        "city": "呼和浩特",
+        "scale": 84.4,
+        "efficiency": 87.4,
+        "energy": 85.8
+      },
+      {
+        "city": "包头",
+        "scale": 82.3,
+        "efficiency": 87.0,
+        "energy": 82.0
+      },
+      {
+        "city": "鄂尔多斯",
+        "scale": 80.2,
+        "efficiency": 86.9,
+        "energy": 79.8
+      },
+      {
+        "city": "巴彦淖尔",
+        "scale": 78.1,
+        "efficiency": 86.8,
+        "energy": 76.1
+      },
+      {
+        "city": "锡林郭勒盟",
+        "scale": 76.0,
+        "efficiency": 86.7,
+        "energy": 78.7
+      },
+      {
+        "city": "呼伦贝尔",
+        "scale": 73.9,
+        "efficiency": 86.7,
+        "energy": 77.4
+      },
+      {
+        "city": "赤峰",
+        "scale": 71.8,
+        "efficiency": 86.7,
+        "energy": 74.1
+      },
+      {
+        "city": "通辽",
+        "scale": 69.7,
+        "efficiency": 86.7,
+        "energy": 72.8
+      },
+      {
+        "city": "乌海",
+        "scale": 67.6,
+        "efficiency": 86.7,
+        "energy": 70.4
+      },
+      {
+        "city": "兴安盟",
+        "scale": 65.5,
+        "efficiency": 86.6,
+        "energy": 72.0
+      },
+      {
+        "city": "阿拉善盟",
+        "scale": 63.4,
+        "efficiency": 86.6,
+        "energy": 74.8
+      }
+    ],
+    "computeDistribution": [
+      {
+        "name": "智能计算",
+        "value": 92.1,
+        "color": "#10b981"
+      },
+      {
+        "name": "通用计算",
+        "value": 4.1,
+        "color": "#0ea5e9"
+      },
+      {
+        "name": "存储集群",
+        "value": 2.5,
+        "color": "#f59e0b"
+      },
+      {
+        "name": "边缘节点",
+        "value": 1.3,
+        "color": "#6366f1"
+      }
+    ],
+    "projects": [
+      {
+        "name": "乌兰察布绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "3.4 万P",
+        "pue": "1.25",
+        "green": "88.6%"
+      },
+      {
+        "name": "呼和浩特绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "3.0 万P",
+        "pue": "1.26",
+        "green": "85.8%"
+      },
+      {
+        "name": "包头绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "1.6 万P",
+        "pue": "1.30",
+        "green": "82.0%"
+      },
+      {
+        "name": "鄂尔多斯绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "1.1 万P",
+        "pue": "1.31",
+        "green": "79.8%"
+      },
+      {
+        "name": "巴彦淖尔绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "0.8 万P",
+        "pue": "1.32",
+        "green": "76.1%"
+      },
+      {
+        "name": "赤峰绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "0.6 万P",
+        "pue": "1.33",
+        "green": "74.1%"
+      },
+      {
+        "name": "通辽绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "0.6 万P",
+        "pue": "1.33",
+        "green": "72.8%"
+      },
+      {
+        "name": "呼伦贝尔绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "0.4 万P",
+        "pue": "1.33",
+        "green": "77.4%"
+      },
+      {
+        "name": "锡林郭勒绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "0.4 万P",
+        "pue": "1.33",
+        "green": "78.7%"
+      },
+      {
+        "name": "乌海绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "0.3 万P",
+        "pue": "1.33",
+        "green": "70.4%"
+      },
+      {
+        "name": "兴安盟绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "0.3 万P",
+        "pue": "1.34",
+        "green": "72.0%"
+      },
+      {
+        "name": "阿拉善盟绿色数据中心节点",
+        "status": "实时抓取",
+        "compute": "0.3 万P",
+        "pue": "1.34",
+        "green": "74.8%"
+      }
+    ]
+  },
+  "yearlyGreenCompute": {
+    "2025 年": {
+      "scoreTrend": [
+        {
+          "year": "2020",
+          "score": 55.0,
+          "pue": 1.83,
+          "green": 34.7
+        },
+        {
+          "year": "2021",
+          "score": 55.0,
+          "pue": 1.74,
+          "green": 45.7
+        },
+        {
+          "year": "2022",
+          "score": 55.0,
+          "pue": 1.63,
+          "green": 56.7
+        },
+        {
+          "year": "2023",
+          "score": 58.4,
+          "pue": 1.5,
+          "green": 68.5
+        },
+        {
+          "year": "2024",
+          "score": 74.8,
+          "pue": 1.37,
+          "green": 77.0
+        },
+        {
+          "year": "2025",
+          "score": 89.1,
+          "pue": 1.28,
+          "green": 84.6
+        }
+      ],
+      "pueRank": [
+        {
+          "id": 1,
+          "city": "乌兰察布",
+          "score": 74.5,
+          "pue": 1.25,
+          "green": 88.6,
+          "load": "3.4 万P",
+          "carbon": 1.43
+        },
+        {
+          "id": 2,
+          "city": "呼和浩特",
+          "score": 71.3,
+          "pue": 1.26,
+          "green": 85.8,
+          "load": "3.0 万P",
+          "carbon": 1.79
+        },
+        {
+          "id": 3,
+          "city": "包头",
+          "score": 62.9,
+          "pue": 1.3,
+          "green": 82.0,
+          "load": "1.6 万P",
+          "carbon": 2.34
+        },
+        {
+          "id": 4,
+          "city": "鄂尔多斯",
+          "score": 59.8,
+          "pue": 1.31,
+          "green": 79.8,
+          "load": "1.1 万P",
+          "carbon": 2.65
+        },
+        {
+          "id": 5,
+          "city": "巴彦淖尔",
+          "score": 56.2,
+          "pue": 1.32,
+          "green": 76.1,
+          "load": "0.8 万P",
+          "carbon": 3.15
+        },
+        {
+          "id": 6,
+          "city": "锡林郭勒盟",
+          "score": 56.1,
+          "pue": 1.33,
+          "green": 78.7,
+          "load": "0.4 万P",
+          "carbon": 2.83
+        },
+        {
+          "id": 7,
+          "city": "呼伦贝尔",
+          "score": 55.3,
+          "pue": 1.33,
+          "green": 77.4,
+          "load": "0.4 万P",
+          "carbon": 3.01
+        },
+        {
+          "id": 8,
+          "city": "赤峰",
+          "score": 55.0,
+          "pue": 1.33,
+          "green": 74.1,
+          "load": "0.6 万P",
+          "carbon": 3.44
+        },
+        {
+          "id": 9,
+          "city": "通辽",
+          "score": 55.0,
+          "pue": 1.33,
+          "green": 72.8,
+          "load": "0.6 万P",
+          "carbon": 3.62
+        },
+        {
+          "id": 10,
+          "city": "乌海",
+          "score": 55.0,
+          "pue": 1.33,
+          "green": 70.4,
+          "load": "0.3 万P",
+          "carbon": 3.94
+        },
+        {
+          "id": 11,
+          "city": "兴安盟",
+          "score": 55.0,
+          "pue": 1.34,
+          "green": 72.0,
+          "load": "0.3 万P",
+          "carbon": 3.75
+        },
+        {
+          "id": 12,
+          "city": "阿拉善盟",
+          "score": 55.0,
+          "pue": 1.34,
+          "green": 74.8,
+          "load": "0.3 万P",
+          "carbon": 3.38
+        }
+      ],
+      "cityScore": [
+        {
+          "city": "乌兰察布",
+          "scale": 86.5,
+          "efficiency": 87.5,
+          "energy": 88.6
+        },
+        {
+          "city": "呼和浩特",
+          "scale": 84.4,
+          "efficiency": 87.4,
+          "energy": 85.8
+        },
+        {
+          "city": "包头",
+          "scale": 82.3,
+          "efficiency": 87.0,
+          "energy": 82.0
+        },
+        {
+          "city": "鄂尔多斯",
+          "scale": 80.2,
+          "efficiency": 86.9,
+          "energy": 79.8
+        },
+        {
+          "city": "巴彦淖尔",
+          "scale": 78.1,
+          "efficiency": 86.8,
+          "energy": 76.1
+        },
+        {
+          "city": "锡林郭勒盟",
+          "scale": 76.0,
+          "efficiency": 86.7,
+          "energy": 78.7
+        },
+        {
+          "city": "呼伦贝尔",
+          "scale": 73.9,
+          "efficiency": 86.7,
+          "energy": 77.4
+        },
+        {
+          "city": "赤峰",
+          "scale": 71.8,
+          "efficiency": 86.7,
+          "energy": 74.1
+        },
+        {
+          "city": "通辽",
+          "scale": 69.7,
+          "efficiency": 86.7,
+          "energy": 72.8
+        },
+        {
+          "city": "乌海",
+          "scale": 67.6,
+          "efficiency": 86.7,
+          "energy": 70.4
+        },
+        {
+          "city": "兴安盟",
+          "scale": 65.5,
+          "efficiency": 86.6,
+          "energy": 72.0
+        },
+        {
+          "city": "阿拉善盟",
+          "scale": 63.4,
+          "efficiency": 86.6,
+          "energy": 74.8
+        }
+      ],
+      "computeDistribution": [
+        {
+          "name": "智能计算",
+          "value": 92.1,
+          "color": "#10b981"
+        },
+        {
+          "name": "通用计算",
+          "value": 4.1,
+          "color": "#0ea5e9"
+        },
+        {
+          "name": "存储集群",
+          "value": 2.5,
+          "color": "#f59e0b"
+        },
+        {
+          "name": "边缘节点",
+          "value": 1.3,
+          "color": "#6366f1"
+        }
+      ],
+      "projects": [
+        {
+          "name": "乌兰察布绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "3.4 万P",
+          "pue": "1.25",
+          "green": "88.6%"
+        },
+        {
+          "name": "呼和浩特绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "3.0 万P",
+          "pue": "1.26",
+          "green": "85.8%"
+        },
+        {
+          "name": "包头绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "1.6 万P",
+          "pue": "1.30",
+          "green": "82.0%"
+        },
+        {
+          "name": "鄂尔多斯绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "1.1 万P",
+          "pue": "1.31",
+          "green": "79.8%"
+        },
+        {
+          "name": "巴彦淖尔绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "0.8 万P",
+          "pue": "1.32",
+          "green": "76.1%"
+        },
+        {
+          "name": "赤峰绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "0.6 万P",
+          "pue": "1.33",
+          "green": "74.1%"
+        },
+        {
+          "name": "通辽绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "0.6 万P",
+          "pue": "1.33",
+          "green": "72.8%"
+        },
+        {
+          "name": "呼伦贝尔绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "0.4 万P",
+          "pue": "1.33",
+          "green": "77.4%"
+        },
+        {
+          "name": "锡林郭勒绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "0.4 万P",
+          "pue": "1.33",
+          "green": "78.7%"
+        },
+        {
+          "name": "乌海绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "0.3 万P",
+          "pue": "1.33",
+          "green": "70.4%"
+        },
+        {
+          "name": "兴安盟绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "0.3 万P",
+          "pue": "1.34",
+          "green": "72.0%"
+        },
+        {
+          "name": "阿拉善盟绿色数据中心节点",
+          "status": "实时抓取",
+          "compute": "0.3 万P",
+          "pue": "1.34",
+          "green": "74.8%"
+        }
+      ],
+      "kpis": {
+        "carbonEmissionTotal": 640.0,
+        "carbonIntensityChange": -10.5,
+        "greenRatio": 84.57,
+        "computeTotal": 12.6,
+        "aiCompute": 11.6,
+        "pueAverage": 1.28,
+        "dcProjects": 79,
+        "quarterPower": 12.2
+      },
+      "sources": [
+        {
+          "id": "xinhua_green_compute",
+          "name": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "ok": true,
+          "fetchedAt": "2026-05-02T16:21:29",
+          "year": 2025,
+          "error": ""
+        },
+        {
+          "id": "digital_china",
+          "name": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "ok": true,
+          "fetchedAt": "2026-05-02T16:21:29",
+          "year": 2025,
+          "error": ""
+        },
+        {
+          "id": "nmg_green_power_base",
+          "name": "内蒙古自治区政府：能源战略资源基地建设",
+          "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+          "ok": true,
+          "fetchedAt": "2026-05-02T16:21:30",
+          "year": 2025,
+          "error": ""
+        },
+        {
+          "id": "people_energy_report",
+          "name": "人民日报：中国能源报绿色算力报道",
+          "url": "https://paper.people.com.cn/zgnyb/pad/content/202507/21/content_30089680.html",
+          "ok": true,
+          "fetchedAt": "2026-05-02T16:21:32",
+          "year": 2025,
+          "error": ""
+        }
+      ],
+      "sourceHighlights": [
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "算力规模",
+          "value": "12.6",
+          "unit": "万P",
+          "snippet": "： 内蒙古扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "算力规模",
+          "value": "11.6",
+          "unit": "万P",
+          "snippet": "基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "绿电占比",
+          "value": "84.57",
+          "unit": "%",
+          "snippet": "来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们对内蒙古绿色算力产业发展前景充满信心。 2023年，《国"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "减排量",
+          "value": "7380",
+          "unit": "吨",
+          "snippet": "耗；在优刻得乌兰察布智算中心，机房产生的热量被回收，用于供暖，每年可回收废热78000吉焦，减少二氧化碳排放量约7380吨。 为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等方面发力。同时，内蒙古"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "新能源装机",
+          "value": "1.35",
+          "unit": "亿千瓦",
+          "snippet": "内蒙古强大的绿电供应能力。据内蒙古自治区能源局局长曹思阳介绍，2024年，内蒙古风力、光伏等新能源累计装机规模突破1.35亿千瓦，超越火电装机量，新能源总装机、新增装机、发电量等多项指标稳居全国首位。 这是2023年8月"
+        },
+        {
+          "sourceId": "digital_china",
+          "source": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "metric": "算力规模",
+          "value": "12.6",
+          "unit": "万P",
+          "snippet": "GJ，减少二氧化碳排放量约7380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11.6万P，规模居全国第一。为推动绿色算力产业发展，内蒙古出台专项政策，从产业布"
+        },
+        {
+          "sourceId": "digital_china",
+          "source": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "metric": "算力规模",
+          "value": "11.6",
+          "unit": "万P",
+          "snippet": "380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11.6万P，规模居全国第一。为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等六个方面"
+        },
+        {
+          "sourceId": "digital_china",
+          "source": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "metric": "绿电占比",
+          "value": "84.57",
+          "unit": "%",
+          "snippet": "，打造全国绿色算力保障基地和大模型训练推理基地。今年一季度，集群内数据中心用电12.2亿度，绿电占比高达84.57%，领跑全国。 内蒙古的绿算产业，不仅能源清洁，更构建起全流程低碳体系。呼和浩特市和林格尔新区"
+        },
+        {
+          "sourceId": "digital_china",
+          "source": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "metric": "PUE",
+          "value": "1.06",
+          "unit": "",
+          "snippet": "程低碳体系。呼和浩特市和林格尔新区的内蒙古百川数字科技有限公司生产的超聚变全液冷服务器，制冷PUE低至1.06，从源头端有效降低了数据中心能耗。优刻得乌兰察布市智算中心负责人冯永成说，中心将机房产生的热"
+        },
+        {
+          "sourceId": "digital_china",
+          "source": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "metric": "减排量",
+          "value": "7380",
+          "unit": "吨",
+          "snippet": "心将机房产生的热量进行回收，用于供暖，整个冬季无需交供暖费。“每年可回收废热78000GJ，减少二氧化碳排放量约7380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11"
+        },
+        {
+          "sourceId": "nmg_green_power_base",
+          "source": "内蒙古自治区政府：能源战略资源基地建设",
+          "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+          "metric": "减排量",
+          "value": "64",
+          "unit": "万吨",
+          "snippet": "计年发电量可达7.6亿千瓦时，所发电量全部由数据中心的新增负荷消纳，每年可节约标煤21万吨、减少二氧化碳排放64万吨。 据了解，该项目是内蒙古首个通过“点对点”直供方式为数据中心提供绿电的新能源项目，并在国内"
+        },
+        {
+          "sourceId": "nmg_green_power_base",
+          "source": "内蒙古自治区政府：能源战略资源基地建设",
+          "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+          "metric": "新能源装机",
+          "value": "7.6",
+          "unit": "亿千瓦",
+          "snippet": "光伏装机6万千瓦，同时配建6.48万千瓦/25.92万千瓦时的储能系统。项目全部投产后，配套新能源预计年发电量可达7.6亿千瓦时，所发电量全部由数据中心的新增负荷消纳，每年可节约标煤21万吨、减少二氧化碳排放64万吨。"
+        },
+        {
+          "sourceId": "nmg_green_power_base",
+          "source": "内蒙古自治区政府：能源战略资源基地建设",
+          "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+          "metric": "投资规模",
+          "value": "16.6",
+          "unit": "亿元",
+          "snippet": "算力中心项目投运。 据悉，该项目于2022年11月纳入自治区首批工业园区绿色供电项目清单，总投资16.6亿元，装机容量36万千瓦，其中风电装机30万千瓦、光伏装机6万千瓦，同时配建6.48万千瓦/25"
+        },
+        {
+          "sourceId": "people_energy_report",
+          "source": "人民日报：中国能源报绿色算力报道",
+          "url": "https://paper.people.com.cn/zgnyb/pad/content/202507/21/content_30089680.html",
+          "metric": "新能源装机",
+          "value": "8.48",
+          "unit": "亿千瓦",
+          "snippet": "兆瓦光伏，45兆瓦/180兆瓦时的储能系统，以及配套建设的220千伏升压站。项目投运后，风光新能源发电量年可达8.48亿千瓦时，相当于减排二氧化碳约48万吨，标志着内蒙古在构建“东数西算”绿色算力枢纽方面取得重要突破"
+        }
+      ],
+      "rawFacts": {
+        "computeWanP": 12.6,
+        "aiComputeWanP": 11.6,
+        "greenRatio": 84.57,
+        "quarterPowerYiKwh": 12.2,
+        "renewableCapacityYiKw": null,
+        "dcProjects": 79,
+        "minPue": 1.06,
+        "pueAverageDerived": 1.28,
+        "carbonReductionTon": 7380.0,
+        "electricityPrice": null,
+        "evidence": {
+          "computeWanP": "： 内蒙古扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…",
+          "aiComputeWanP": "基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们",
+          "greenRatio": "来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们对内蒙古绿色算力产业发展前景充满信心。 2023年，《国",
+          "quarterPowerYiKwh": "网型储能等方式，提升数据中心绿电占比，全力打造全国绿色算力保障基地和大模型训练推理基地。今年一季度，集群内数据中心用电12.2亿度，绿电占比高达84.57%，有效降低用电成本。 “东数西算”工程“含绿量”的提升，离不开内蒙",
+          "dcProjects": "前，内蒙古已构建起涵盖上游、中游、下游的绿色算力全产业链，覆盖通算、智算、超算多元算力体系，79个数据中心项目落地生根，2800亿元投资构筑起数字时代新基座。 内蒙古自治区政务服务与数据管理局数字经",
+          "minPue": "程低碳体系。呼和浩特市和林格尔新区的内蒙古百川数字科技有限公司生产的超聚变全液冷服务器，制冷PUE低至1.06，从源头端有效降低了数据中心能耗。优刻得乌兰察布市智算中心负责人冯永成说，中心将机房产生的热",
+          "carbonReductionTon": "耗；在优刻得乌兰察布智算中心，机房产生的热量被回收，用于供暖，每年可回收废热78000吉焦，减少二氧化碳排放量约7380吨。 为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等方面发力。同时，内蒙古"
+        },
+        "highlights": [
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "算力规模",
+            "value": "12.6",
+            "unit": "万P",
+            "snippet": "： 内蒙古扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "算力规模",
+            "value": "11.6",
+            "unit": "万P",
+            "snippet": "基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "绿电占比",
+            "value": "84.57",
+            "unit": "%",
+            "snippet": "来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们对内蒙古绿色算力产业发展前景充满信心。 2023年，《国"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "减排量",
+            "value": "7380",
+            "unit": "吨",
+            "snippet": "耗；在优刻得乌兰察布智算中心，机房产生的热量被回收，用于供暖，每年可回收废热78000吉焦，减少二氧化碳排放量约7380吨。 为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等方面发力。同时，内蒙古"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "新能源装机",
+            "value": "1.35",
+            "unit": "亿千瓦",
+            "snippet": "内蒙古强大的绿电供应能力。据内蒙古自治区能源局局长曹思阳介绍，2024年，内蒙古风力、光伏等新能源累计装机规模突破1.35亿千瓦，超越火电装机量，新能源总装机、新增装机、发电量等多项指标稳居全国首位。 这是2023年8月"
+          },
+          {
+            "sourceId": "digital_china",
+            "source": "数字中国：内蒙古绿色算力大基地建设",
+            "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+            "metric": "算力规模",
+            "value": "12.6",
+            "unit": "万P",
+            "snippet": "GJ，减少二氧化碳排放量约7380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11.6万P，规模居全国第一。为推动绿色算力产业发展，内蒙古出台专项政策，从产业布"
+          },
+          {
+            "sourceId": "digital_china",
+            "source": "数字中国：内蒙古绿色算力大基地建设",
+            "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+            "metric": "算力规模",
+            "value": "11.6",
+            "unit": "万P",
+            "snippet": "380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11.6万P，规模居全国第一。为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等六个方面"
+          },
+          {
+            "sourceId": "digital_china",
+            "source": "数字中国：内蒙古绿色算力大基地建设",
+            "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+            "metric": "绿电占比",
+            "value": "84.57",
+            "unit": "%",
+            "snippet": "，打造全国绿色算力保障基地和大模型训练推理基地。今年一季度，集群内数据中心用电12.2亿度，绿电占比高达84.57%，领跑全国。 内蒙古的绿算产业，不仅能源清洁，更构建起全流程低碳体系。呼和浩特市和林格尔新区"
+          },
+          {
+            "sourceId": "digital_china",
+            "source": "数字中国：内蒙古绿色算力大基地建设",
+            "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+            "metric": "PUE",
+            "value": "1.06",
+            "unit": "",
+            "snippet": "程低碳体系。呼和浩特市和林格尔新区的内蒙古百川数字科技有限公司生产的超聚变全液冷服务器，制冷PUE低至1.06，从源头端有效降低了数据中心能耗。优刻得乌兰察布市智算中心负责人冯永成说，中心将机房产生的热"
+          },
+          {
+            "sourceId": "digital_china",
+            "source": "数字中国：内蒙古绿色算力大基地建设",
+            "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+            "metric": "减排量",
+            "value": "7380",
+            "unit": "吨",
+            "snippet": "心将机房产生的热量进行回收，用于供暖，整个冬季无需交供暖费。“每年可回收废热78000GJ，减少二氧化碳排放量约7380吨。” 绿算产业正重塑北疆经济版图。截至今年一季度，内蒙古算力规模达12.6万P，其中智算11"
+          },
+          {
+            "sourceId": "nmg_green_power_base",
+            "source": "内蒙古自治区政府：能源战略资源基地建设",
+            "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+            "metric": "减排量",
+            "value": "64",
+            "unit": "万吨",
+            "snippet": "计年发电量可达7.6亿千瓦时，所发电量全部由数据中心的新增负荷消纳，每年可节约标煤21万吨、减少二氧化碳排放64万吨。 据了解，该项目是内蒙古首个通过“点对点”直供方式为数据中心提供绿电的新能源项目，并在国内"
+          },
+          {
+            "sourceId": "nmg_green_power_base",
+            "source": "内蒙古自治区政府：能源战略资源基地建设",
+            "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+            "metric": "新能源装机",
+            "value": "7.6",
+            "unit": "亿千瓦",
+            "snippet": "光伏装机6万千瓦，同时配建6.48万千瓦/25.92万千瓦时的储能系统。项目全部投产后，配套新能源预计年发电量可达7.6亿千瓦时，所发电量全部由数据中心的新增负荷消纳，每年可节约标煤21万吨、减少二氧化碳排放64万吨。"
+          },
+          {
+            "sourceId": "nmg_green_power_base",
+            "source": "内蒙古自治区政府：能源战略资源基地建设",
+            "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
+            "metric": "投资规模",
+            "value": "16.6",
+            "unit": "亿元",
+            "snippet": "算力中心项目投运。 据悉，该项目于2022年11月纳入自治区首批工业园区绿色供电项目清单，总投资16.6亿元，装机容量36万千瓦，其中风电装机30万千瓦、光伏装机6万千瓦，同时配建6.48万千瓦/25"
+          },
+          {
+            "sourceId": "people_energy_report",
+            "source": "人民日报：中国能源报绿色算力报道",
+            "url": "https://paper.people.com.cn/zgnyb/pad/content/202507/21/content_30089680.html",
+            "metric": "新能源装机",
+            "value": "8.48",
+            "unit": "亿千瓦",
+            "snippet": "兆瓦光伏，45兆瓦/180兆瓦时的储能系统，以及配套建设的220千伏升压站。项目投运后，风光新能源发电量年可达8.48亿千瓦时，相当于减排二氧化碳约48万吨，标志着内蒙古在构建“东数西算”绿色算力枢纽方面取得重要突破"
+          }
+        ]
+      },
+      "generatedAt": "2026-05-02T16:21:32",
+      "method": "后端按 2025 年公开网页实时爬取，并用抓取到的核心指标生成绿色算力页面数据"
+    }
+  }
+}

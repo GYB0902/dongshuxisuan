@@ -434,7 +434,7 @@ export function GeoMap() {
       return;
     }
     setSelectedId(next.hubPoints[0]?.id ?? HUB_POINTS[0].id);
-    notify('已重新爬取公开网页并刷新地图数据');
+    notify(next.meta.error ? '后端 API 未连接，已使用内置真实地图数据快照' : '已重新爬取公开网页并刷新地图数据');
   };
 
   const handleRegionClick = (feature: GeoFeature) => {

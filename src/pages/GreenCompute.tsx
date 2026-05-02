@@ -335,10 +335,14 @@ export function GreenCompute() {
   const visibleProjects = scenario.projects;
 
   const handleSync = async () => {
-    await refresh(true);
+    const next = await refresh(true);
     const nextTime = nowText();
     setLastSync(nextTime);
-    notify(`已从后端 API 同步${region} ${year}绿色算力数据`);
+    notify(
+      next?.meta.error
+        ? `后端 API 未连接，已使用${region} ${year}真实数据快照`
+        : `已从后端 API 同步${region} ${year}绿色算力数据`,
+    );
   };
 
   const handleExport = () => {

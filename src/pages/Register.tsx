@@ -65,7 +65,7 @@ export function Register() {
       });
 
       writeAuthUser(user);
-      notify('注册成功，已保存到 MySQL 并自动登录');
+      notify(user.storageMode === 'local' ? '注册成功，已保存到浏览器本地并自动登录' : '注册成功，已保存到 MySQL 并自动登录');
       navigate('/overview', { replace: true });
     } catch (error) {
       notify(error instanceof Error ? error.message : '注册失败，请检查后端和 MySQL 连接');
@@ -101,20 +101,20 @@ export function Register() {
 
             <div className="mt-10">
               <div className="inline-flex rounded-full bg-white px-3 py-1 text-xs font-bold text-emerald-700 shadow-sm">
-                注册信息写入 MySQL 数据库
+                注册信息优先写入 MySQL 数据库
               </div>
               <h1 className="mt-5 text-3xl font-black leading-tight text-slate-950 md:text-4xl">
                 创建你的用户账号
               </h1>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-600">
-                注册后可查看数据概览、绿色算力评估、LMDI 与 DID 分析，账号会保存在 MySQL 数据库中，管理员功能仍仅限演示账号。
+                注册后可查看数据概览、绿色算力评估、LMDI 与 DID 分析。本地后端运行时写入 MySQL，静态部署时使用浏览器本地账户。
               </p>
             </div>
           </div>
 
           <div className="grid gap-3 text-sm">
             {[
-              { icon: UserPlus2, label: '注册账号', text: '创建普通用户，写入 MySQL 数据库' },
+              { icon: UserPlus2, label: '注册账号', text: '创建普通用户，优先写入 MySQL 数据库' },
               { icon: UserCircle2, label: '自动登录', text: '注册成功后直接进入数据概览' },
               { icon: ShieldCheck, label: '权限控制', text: '管理员账号不开放注册' },
             ].map((item) => {
@@ -144,7 +144,7 @@ export function Register() {
             </div>
             <h2 className="mt-2 text-2xl font-black text-slate-900">创建普通用户账号</h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-500">
-              账号会保存到 MySQL 数据库中，注册成功后直接自动登录。
+              本地后端运行时保存到 MySQL，静态部署时保存到浏览器本地，注册成功后直接自动登录。
             </p>
           </div>
 
