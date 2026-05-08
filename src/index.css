@@ -77,4 +77,38 @@
     background-color: #0f172a;
     border-color: #475569;
   }
+
+  html[data-theme='dark'] .bg-\[\#f8fafc\] {
+    background-color: #08111d !important;
+  }
+
+  html[data-theme='dark'] .bg-\[\#f8fafc\] > .absolute.inset-0.opacity-80 {
+    background-image:
+      linear-gradient(rgba(71, 85, 105, 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(71, 85, 105, 0.18) 1px, transparent 1px) !important;
+    opacity: 0.34 !important;
+  }
+
+  html[data-theme='dark'] .bg-\[\#f8fafc\] path.cursor-pointer {
+    filter: saturate(0.84) brightness(0.82);
+    transition: filter 160ms ease;
+  }
+
+  html[data-theme='dark'] .bg-\[\#f8fafc\] path.cursor-pointer:hover {
+    filter: saturate(0.95) brightness(0.9);
+  }
+
+  html[data-theme='dark'] .bg-\[\#f8fafc\] .fill-slate-700,
+  html[data-theme='dark'] .bg-\[\#f8fafc\] .fill-slate-900 {
+    fill: #e2e8f0 !important;
+    stroke: #020617 !important;
+  }
+
+  html[data-theme='dark'] .bg-\[\#f8fafc\] rect[fill='rgba(255,255,255,0.86)'] {
+    fill: rgba(15, 23, 42, 0.88) !important;
+  }
+
+  html[data-theme='dark'] .bg-\[\#f8fafc\] rect[fill='rgba(255,255,255,0.86)'] ~ text {
+    fill: #e2e8f0 !important;
+  }
 }
