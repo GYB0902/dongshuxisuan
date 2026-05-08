@@ -525,7 +525,7 @@ export function GreenCompute() {
         <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
           <div className="mb-4">
             <h3 className="text-lg font-bold text-slate-900">PUE 排名</h3>
-            <p className="text-sm text-slate-500">默认展示前 9 条，滚轮查看全部</p>
+            <p className="text-sm text-slate-500">共 12 个盟市节点，滚轮查看全部</p>
           </div>
           <div className="grid grid-cols-[42px_1fr_58px_66px_64px] gap-2 border-y border-slate-100 py-2 text-[10px] font-bold text-slate-400">
             <span>排名</span>
