@@ -181,7 +181,7 @@ function fallbackLoginUser(payload: AuthLoginPayload): AuthUser {
     if (localUser) return toAuthUser(localUser);
   }
 
-  throw new Error('账号或密码错误，或后端服务暂时不可用');
+  throw new Error('账号或密码错误');
 }
 
 function fallbackRegisterUser(payload: AuthRegisterPayload): AuthUser {
