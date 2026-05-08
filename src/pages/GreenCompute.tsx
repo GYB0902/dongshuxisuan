@@ -530,9 +530,9 @@ export function GreenCompute() {
           <div className="grid grid-cols-[42px_1fr_58px_66px_64px] gap-2 border-y border-slate-100 py-2 text-[10px] font-bold text-slate-400">
             <span>排名</span>
             <span>城市</span>
-            <span className="text-right">PUE</span>
-            <span className="text-right">评分</span>
-            <span className="text-right">绿电</span>
+            <span className="pr-3 text-right">PUE</span>
+            <span className="pr-3 text-right">评分</span>
+            <span className="pr-3 text-right">绿电</span>
           </div>
           <div className="scroll-panel max-h-[440px] overflow-y-auto pr-2">
             {visiblePueRank.map((item, index) => (
