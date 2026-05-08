@@ -99,6 +99,11 @@ function buildEnergyMix(greenShare: number) {
 
 function tooltipStyle() {
   return {
+    allowEscapeViewBox: { x: true, y: true },
+    wrapperStyle: {
+      zIndex: 10000,
+      pointerEvents: 'none' as const,
+    },
     contentStyle: {
       background: '#ffffff',
       border: '1px solid #e2e8f0',
