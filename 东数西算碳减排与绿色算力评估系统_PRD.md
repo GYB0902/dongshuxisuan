@@ -390,6 +390,7 @@
 
 | **日期** | **变更内容** | **涉及文件/模块** | **PRD同步要求** |
 |:---|:---|:---|:---|
+| 2026-05-08 | 公网 5050 后端网关补齐 `/api/live/overview`、`/api/live/cache`、`/api/live/scrape`，从已部署 `live_overview.json` 读取 12 个盟市与实时来源数据，解决地理可视化页“后端 API 未连接”兜底提示；对应 Git 检查点为 `3c91d49`，公网服务已部署并验证 `/api/live/overview` 返回 200 | backend/public_gateway.py; 服务器 `/opt/dongshuxisuan-api/app.py`; Nginx `/api/` 代理 | 后续调整公网后端端口、AI 网关、实时数据接口、地图数据来源或 `/api/live/*` 响应格式时，需同步本记录 |
 | 2026-05-08 | 绿色算力页 PUE 排名副标题由“默认展示前 9 条，滚轮查看全部”改为“共 12 个盟市节点，滚轮查看全部”；对应 Git 检查点为 `cab4e47`，公网已发布并验证 JS 包包含新文案 | src/pages/GreenCompute.tsx; 公网 `/usr/share/nginx/html/dongshuxisuan_dist` | 后续调整 PUE 排名节点数量、盟市口径、列表滚动说明或绿色算力页文案时，需同步本记录 |
 | 2026-05-08 | 绿色算力页 PUE 排名表头的 `PUE`、`评分`、`绿电` 三列增加右侧内边距，使表头视觉位置向左收并对齐下方数字；对应 Git 检查点为 `f30f9b4`，公网已发布并验证 JS 包包含新表头样式 | src/pages/GreenCompute.tsx; 公网 `/usr/share/nginx/html/dongshuxisuan_dist` | 后续调整 PUE 排名表格列宽、表头对齐、数字列排版或绿色算力页列表密度时，需同步本记录 |
 | 2026-05-08 | 数据概览页 Recharts 图表 Tooltip 开启 `allowEscapeViewBox` 并提高悬浮层 `z-index`，能源结构等图表悬浮框不再被相邻模块遮挡；对应 Git 检查点为 `2b1e0b1`，公网已发布并验证 JS 包含本次层级配置 | src/pages/Overview.tsx; 公网 `/usr/share/nginx/html/dongshuxisuan_dist` | 后续调整图表 Tooltip、卡片层级、悬浮框定位或可视化交互时，需同步本记录 |
