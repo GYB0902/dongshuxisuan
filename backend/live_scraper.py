@@ -393,29 +393,68 @@ def _build_dataset(source_texts: list[SourceText], latest_year: int = 2024, meth
         }
         for index, item in enumerate(region_metrics)
     ]
-    score_trend = [
-        {
+    score_trend: list[dict[str, Any]] = []
+    for item in trend:
+        score_item = {
             "year": item["year"],
             "score": _score_from(item["green"], item["pue"], item["compute"]),
             "pue": item["pue"],
             "green": item["green"],
         }
-        for item in trend
+        score_trend.append(score_item)
+
+    sources: list[dict[str, Any]] = []
+    for src in source_texts:
+        src_info = {
+            "id": src.id,
+            "name": src.name,
+            "url": src.url,
+            "ok": src.ok,
+            "fetchedAt": src.fetched_at,
+            "year": src.year,
+            "error": src.error,
+        }
+        sources.append(src_info)
+
+    ok_sources: list[dict[str, Any]] = []
+    for src_info in sources:
+        if src_info["ok"]:
+            ok_sources.append(src_info)
+
+    pue_rank = sorted(rankings, key=lambda item: item["pue"])
+
+    city_score: list[dict[str, Any]] = []
+    for index, item in enumerate(rankings):
+        scale_score = _round(_clip(72 + compute_wanp * 1.15 - index * 2.1, 0, 100), 1)
+        efficiency_score = _round(_clip(100 - item["pue"] * 10, 0, 100), 1)
+        city_score.append(
+            {
+                "city": item["city"],
+                "scale": scale_score,
+                "efficiency": efficiency_score,
+                "energy": item["green"],
+            }
+        )
+
+    compute_gap = max(0, 100 - ai_compute / compute_wanp * 100)
+    compute_distribution = [
+        {"name": "智能计算", "value": _round(ai_compute / compute_wanp * 100, 1), "color": "#10b981"},
+        {"name": "通用计算", "value": _round(compute_gap * 0.52, 1), "color": "#0ea5e9"},
+        {"name": "存储集群", "value": _round(compute_gap * 0.32, 1), "color": "#f59e0b"},
+        {"name": "边缘节点", "value": _round(compute_gap * 0.16, 1), "color": "#6366f1"},
     ]
 
-    sources = [
-        {
-            "id": item.id,
-            "name": item.name,
-            "url": item.url,
-            "ok": item.ok,
-            "fetchedAt": item.fetched_at,
-            "year": item.year,
-            "error": item.error,
-        }
-        for item in source_texts
-    ]
-    ok_sources = [item for item in sources if item["ok"]]
+    projects: list[dict[str, Any]] = []
+    for hub in hubs:
+        projects.append(
+            {
+                "name": f"{hub['city']}绿色数据中心节点",
+                "status": "实时抓取",
+                "compute": hub["load"],
+                "pue": f"{hub['pue']:.2f}",
+                "green": f"{hub['green']}%",
+            }
+        )
 
     return {
         "meta": {
@@ -476,26 +515,10 @@ def _build_dataset(source_texts: list[SourceText], latest_year: int = 2024, meth
         "hubPoints": hubs,
         "greenCompute": {
             "scoreTrend": score_trend,
-            "pueRank": sorted(rankings, key=lambda item: item["pue"]),
-            "cityScore": [
-                {
-                    "city": item["city"],
-                    "scale": _round(_clip(72 + compute_wanp * 1.15 - index * 2.1, 0, 100), 1),
-                    "efficiency": _round(_clip(100 - item["pue"] * 10, 0, 100), 1),
-                    "energy": item["green"],
-                }
-                for index, item in enumerate(rankings)
-            ],
-            "computeDistribution": [
-                {"name": "智能计算", "value": _round(ai_compute / compute_wanp * 100, 1), "color": "#10b981"},
-                {"name": "通用计算", "value": _round(max(0, 100 - ai_compute / compute_wanp * 100) * 0.52, 1), "color": "#0ea5e9"},
-                {"name": "存储集群", "value": _round(max(0, 100 - ai_compute / compute_wanp * 100) * 0.32, 1), "color": "#f59e0b"},
-                {"name": "边缘节点", "value": _round(max(0, 100 - ai_compute / compute_wanp * 100) * 0.16, 1), "color": "#6366f1"},
-            ],
-            "projects": [
-                {"name": f"{hub['city']}绿色数据中心节点", "status": "实时抓取", "compute": hub["load"], "pue": f"{hub['pue']:.2f}", "green": f"{hub['green']}%"}
-                for hub in hubs
-            ],
+            "pueRank": pue_rank,
+            "cityScore": city_score,
+            "computeDistribution": compute_distribution,
+            "projects": projects,
         },
     }
 
@@ -544,8 +567,18 @@ def get_live_data(force: bool = False) -> dict[str, Any]:
         cached["meta"]["cacheHit"] = True
         return cached
 
-    source_texts = [_fetch_source(source) for source in SOURCES]
-    if not any(item.ok and item.text for item in source_texts) and cached:
+    source_texts: list[SourceText] = []
+    for source in SOURCES:
+        fetched = _fetch_source(source)
+        source_texts.append(fetched)
+
+    fetch_failed = True
+    for item in source_texts:
+        if item.ok and item.text:
+            fetch_failed = False
+            break
+
+    if fetch_failed and cached:
         cached["meta"]["cacheHit"] = True
         cached["meta"]["stale"] = True
         cached["meta"]["error"] = "实时网页抓取失败，暂时返回上一次缓存"
@@ -554,8 +587,18 @@ def get_live_data(force: bool = False) -> dict[str, Any]:
     data = _build_dataset(source_texts)
     yearly_green_compute: dict[str, Any] = {}
     for target_year in (2025,):
-        year_sources = [item for item in source_texts if item.year == target_year]
-        if any(item.ok and item.text for item in year_sources):
+        year_sources: list[SourceText] = []
+        for item in source_texts:
+            if item.year == target_year:
+                year_sources.append(item)
+
+        year_has_data = False
+        for item in year_sources:
+            if item.ok and item.text:
+                year_has_data = True
+                break
+
+        if year_has_data:
             year_data = _build_dataset(
                 year_sources,
                 latest_year=target_year,

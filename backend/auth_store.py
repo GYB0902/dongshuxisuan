@@ -193,11 +193,12 @@ def _verify_password(password: str, salt_hex: str, stored_hash: str) -> bool:
 
 
 def _reserved_username(username: str) -> bool:
-    normalized = username.strip().lower()
-    return normalized in {
+    norm = username.strip().lower()
+    reserved = {
         DEMO_ACCOUNTS["user"]["username"].lower(),
         DEMO_ACCOUNTS["admin"]["username"].lower(),
     }
+    return norm in reserved
 
 
 def _auth_user(
@@ -208,15 +209,15 @@ def _auth_user(
     level: str,
     organization: str | None = None,
 ) -> dict[str, Any]:
-    user: dict[str, Any] = {
+    out: dict[str, Any] = {
         "role": role,
         "username": username,
         "name": name,
         "level": level,
     }
     if organization:
-        user["organization"] = organization
-    return user
+        out["organization"] = organization
+    return out
 
 
 def _find_user(username: str) -> dict[str, Any] | None:
@@ -236,29 +237,29 @@ def _find_user(username: str) -> dict[str, Any] | None:
 
 
 def register_user(*, username: str, password: str, name: str, organization: str = "") -> dict[str, Any]:
-    clean_username = username.strip()
-    clean_name = name.strip()
-    clean_password = password.strip()
-    clean_organization = organization.strip()
+    u_name = username.strip()
+    n_val = name.strip()
+    p_val = password.strip()
+    org_val = organization.strip()
 
-    if not clean_name or not clean_username or not clean_password:
+    if not n_val or not u_name or not p_val:
         raise ValidationError("请把注册信息填写完整")
 
-    if len(clean_username) < 3:
+    if len(u_name) < 3:
         raise ValidationError("账号至少 3 个字符")
 
-    if len(clean_password) < 6:
+    if len(p_val) < 6:
         raise ValidationError("密码至少 6 位")
 
-    if _reserved_username(clean_username):
+    if _reserved_username(u_name):
         raise DuplicateUserError("该账号为系统演示账号，请更换用户名")
 
     ensure_schema()
 
-    if _find_user(clean_username):
+    if _find_user(u_name):
         raise DuplicateUserError("账号已存在，请更换用户名")
 
-    password_hash, salt = _make_password_record(clean_password)
+    password_hash, salt = _make_password_record(p_val)
 
     try:
         with _mysql_connection(_database_name()) as connection:
@@ -269,11 +270,11 @@ def register_user(*, username: str, password: str, name: str, organization: str 
                     VALUES (%s, %s, %s, %s, %s, 'user', '注册用户')
                     """,
                     (
-                        clean_username,
+                        u_name,
                         password_hash,
                         salt,
-                        clean_name,
-                        clean_organization or None,
+                        n_val,
+                        org_val or None,
                     ),
                 )
     except pymysql.err.IntegrityError as exc:
@@ -283,27 +284,27 @@ def register_user(*, username: str, password: str, name: str, organization: str 
 
     return _auth_user(
         role="user",
-        username=clean_username,
-        name=clean_name,
+        username=u_name,
+        name=n_val,
         level="注册用户",
-        organization=clean_organization or None,
+        organization=org_val or None,
     )
 
 
 def login_user(*, role: str, username: str, password: str) -> dict[str, Any]:
-    clean_role = role.strip().lower()
-    clean_username = username.strip()
-    clean_password = password.strip()
+    role_key = role.strip().lower()
+    u_name = username.strip()
+    p_val = password.strip()
 
-    if clean_role not in {"user", "admin"}:
+    if role_key not in {"user", "admin"}:
         raise ValidationError("请选择正确的登录身份")
 
-    if not clean_username or not clean_password:
+    if not u_name or not p_val:
         raise ValidationError("请输入账号和密码")
 
-    if clean_role == "user":
+    if role_key == "user":
         demo = DEMO_ACCOUNTS["user"]
-        if clean_username == demo["username"] and clean_password == demo["password"]:
+        if u_name == demo["username"] and p_val == demo["password"]:
             return _auth_user(
                 role="user",
                 username=demo["username"],
@@ -312,7 +313,7 @@ def login_user(*, role: str, username: str, password: str) -> dict[str, Any]:
             )
     else:
         demo = DEMO_ACCOUNTS["admin"]
-        if clean_username == demo["username"] and clean_password == demo["password"]:
+        if u_name == demo["username"] and p_val == demo["password"]:
             return _auth_user(
                 role="admin",
                 username=demo["username"],
@@ -320,21 +321,21 @@ def login_user(*, role: str, username: str, password: str) -> dict[str, Any]:
                 level=demo["level"],
             )
 
-    row = _find_user(clean_username)
+    row = _find_user(u_name)
     if not row:
         raise AuthenticationError("账号或密码不正确")
 
-    row_role = str(row.get("role") or "user").lower()
-    if row_role != clean_role:
+    role_in_db = str(row.get("role") or "user").lower()
+    if role_in_db != role_key:
         raise AuthenticationError("账号身份不匹配，请切换正确的登录入口")
 
-    if not _verify_password(clean_password, row["salt"], row["password_hash"]):
+    if not _verify_password(p_val, row["salt"], row["password_hash"]):
         raise AuthenticationError("账号或密码不正确")
 
     return _auth_user(
-        role=row_role,
+        role=role_in_db,
         username=row["username"],
         name=row["name"],
-        level=row.get("level") or ("系统管理员" if row_role == "admin" else "注册用户"),
+        level=row.get("level") or ("系统管理员" if role_in_db == "admin" else "注册用户"),
         organization=row.get("organization"),
     )

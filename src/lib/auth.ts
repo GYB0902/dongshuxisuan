@@ -131,13 +131,20 @@ function readLocalRegisteredUsers(): StoredLocalUser[] {
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) return [];
 
-    return parsed.filter(
-      (item): item is StoredLocalUser =>
+    const users: StoredLocalUser[] = [];
+    for (const item of parsed) {
+      const itemOk =
         item?.role === 'user' &&
         typeof item.username === 'string' &&
         typeof item.password === 'string' &&
-        typeof item.name === 'string',
-    );
+        typeof item.name === 'string';
+
+      if (itemOk) {
+        users.push(item);
+      }
+    }
+
+    return users;
   } catch {
     return [];
   }
@@ -159,11 +166,11 @@ function toAuthUser(user: StoredLocalUser): AuthUser {
 }
 
 function fallbackLoginUser(payload: AuthLoginPayload): AuthUser {
-  const cleanUsername = payload.username.trim();
-  const cleanPassword = payload.password.trim();
+  const uName = payload.username.trim();
+  const pText = payload.password.trim();
   const account = demoAccounts[payload.role];
 
-  if (cleanUsername === account.username && cleanPassword === account.password) {
+  if (uName === account.username && pText === account.password) {
     return {
       role: payload.role,
       username: account.username,
@@ -174,9 +181,14 @@ function fallbackLoginUser(payload: AuthLoginPayload): AuthUser {
   }
 
   if (payload.role === 'user') {
-    const localUser = readLocalRegisteredUsers().find(
-      (item) => item.username === cleanUsername && item.password === cleanPassword,
-    );
+    let localUser: StoredLocalUser | undefined;
+    const localUsers = readLocalRegisteredUsers();
+    for (const item of localUsers) {
+      if (item.username === uName && item.password === pText) {
+        localUser = item;
+        break;
+      }
+    }
 
     if (localUser) return toAuthUser(localUser);
   }
@@ -185,20 +197,25 @@ function fallbackLoginUser(payload: AuthLoginPayload): AuthUser {
 }
 
 function fallbackRegisterUser(payload: AuthRegisterPayload): AuthUser {
-  const cleanUsername = payload.username.trim();
-  const lowerUsername = cleanUsername.toLowerCase();
+  const uName = payload.username.trim();
+  const unKey = uName.toLowerCase();
   const users = readLocalRegisteredUsers();
 
-  const duplicated =
-    lowerUsername === demoAccounts.user.username ||
-    lowerUsername === demoAccounts.admin.username ||
-    users.some((item) => item.username.toLowerCase() === lowerUsername);
+  let duplicated = unKey === demoAccounts.user.username || unKey === demoAccounts.admin.username;
+  if (!duplicated) {
+    for (const item of users) {
+      if (item.username.toLowerCase() === unKey) {
+        duplicated = true;
+        break;
+      }
+    }
+  }
 
   if (duplicated) throw new Error('账号已存在，请更换用户名');
 
   const nextUser: StoredLocalUser = {
     role: 'user',
-    username: cleanUsername,
+    username: uName,
     password: payload.password,
     name: payload.name.trim(),
     organization: payload.organization?.trim(),
@@ -206,7 +223,9 @@ function fallbackRegisterUser(payload: AuthRegisterPayload): AuthUser {
     createdAt: new Date().toISOString(),
   };
 
-  writeLocalRegisteredUsers([...users, nextUser]);
+  const nextUsers = users.slice();
+  nextUsers.push(nextUser);
+  writeLocalRegisteredUsers(nextUsers);
   return toAuthUser(nextUser);
 }
 
