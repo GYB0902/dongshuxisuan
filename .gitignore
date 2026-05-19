@@ -11,3 +11,5 @@ backend/cache/
 *.log
 .env*
 !.env.example
+
+.vercel

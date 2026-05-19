@@ -1,4 +1,5 @@
 type CsvValue = string | number | boolean | null | undefined;
+export type ToastType = 'success' | 'error';
 
 export type CsvRow = Record<string, CsvValue>;
 
@@ -30,8 +31,8 @@ export function downloadText(filename: string, content: string, mimeType = 'text
   URL.revokeObjectURL(url);
 }
 
-export function notify(message: string) {
-  window.dispatchEvent(new CustomEvent('app-toast', { detail: { message } }));
+export function notify(message: string, type: ToastType = 'success') {
+  window.dispatchEvent(new CustomEvent('app-toast', { detail: { message, type } }));
 }
 
 export function nowText() {

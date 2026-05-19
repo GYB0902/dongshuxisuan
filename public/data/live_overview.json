@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-05-02T16:21:32",
+    "generatedAt": "2026-05-04T13:36:54",
     "cacheTtlMinutes": 30,
-    "liveSourceCount": 11,
+    "liveSourceCount": 10,
     "totalSourceCount": 11,
     "highlightCount": 30,
     "cityCount": 12,
@@ -16,7 +16,7 @@
       "name": "新华社：草原云谷 数智奔涌",
       "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:29",
+      "fetchedAt": "2026-05-04T13:36:42",
       "year": 2025,
       "error": ""
     },
@@ -25,7 +25,7 @@
       "name": "数字中国：内蒙古绿色算力大基地建设",
       "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:29",
+      "fetchedAt": "2026-05-04T13:36:43",
       "year": 2025,
       "error": ""
     },
@@ -34,7 +34,7 @@
       "name": "内蒙古统计局：2024年国民经济和社会发展统计公报",
       "url": "https://tj.nmg.gov.cn/tjyw/tjgb/ndtjgb/202504/t20250402_2692478.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:30",
+      "fetchedAt": "2026-05-04T13:36:45",
       "year": 2024,
       "error": ""
     },
@@ -43,7 +43,7 @@
       "name": "国家发改委：全国一体化算力网络枢纽节点",
       "url": "https://www.ndrc.gov.cn/fzggw/jgsj/gjss/sjdt/202208/t20220829_1334082.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:30",
+      "fetchedAt": "2026-05-04T13:36:46",
       "year": null,
       "error": ""
     },
@@ -52,7 +52,7 @@
       "name": "内蒙古自治区政府：能源战略资源基地建设",
       "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:30",
+      "fetchedAt": "2026-05-04T13:36:48",
       "year": 2025,
       "error": ""
     },
@@ -61,7 +61,7 @@
       "name": "国家发改委：数据中心绿色低碳发展",
       "url": "https://www.ndrc.gov.cn/wsdwhfz/202106/t20210602_1282500.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:31",
+      "fetchedAt": "2026-05-04T13:36:49",
       "year": null,
       "error": ""
     },
@@ -70,7 +70,7 @@
       "name": "内蒙古自治区政府：支持和林格尔集群绿色算力产业",
       "url": "https://www.nmg.gov.cn/zfbgt/zwgk/zzqwj/202406/t20240621_2527949.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:31",
+      "fetchedAt": "2026-05-04T13:36:50",
       "year": 2024,
       "error": ""
     },
@@ -79,7 +79,7 @@
       "name": "内蒙古科技厅：绿色算力与科技创新动态",
       "url": "https://kjt.nmg.gov.cn/slb/kjdt/mscx/202409/t20240906_2570373.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:31",
+      "fetchedAt": "2026-05-04T13:36:52",
       "year": 2024,
       "error": ""
     },
@@ -88,7 +88,7 @@
       "name": "中国青年报：绿色算力产业观察",
       "url": "https://zqb.cyol.com/pc/content/202604/22/content_424986.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:31",
+      "fetchedAt": "2026-05-04T13:36:53",
       "year": 2026,
       "error": ""
     },
@@ -96,17 +96,17 @@
       "id": "china_power_green_compute",
       "name": "中国电力报：绿电支撑算力发展",
       "url": "https://www.chinapower.org.cn/detail/457602.html",
-      "ok": true,
-      "fetchedAt": "2026-05-02T16:21:31",
+      "ok": false,
+      "fetchedAt": "2026-05-04T13:36:53",
       "year": null,
-      "error": ""
+      "error": "HTTPSConnectionPool(host='www.chinapower.org.cn', port=443): Max retries exceeded with url: /detail/457602.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1077)')))"
     },
     {
       "id": "people_energy_report",
       "name": "人民日报：中国能源报绿色算力报道",
       "url": "https://paper.people.com.cn/zgnyb/pad/content/202507/21/content_30089680.html",
       "ok": true,
-      "fetchedAt": "2026-05-02T16:21:32",
+      "fetchedAt": "2026-05-04T13:36:53",
       "year": 2025,
       "error": ""
     }
@@ -365,22 +365,22 @@
       "snippet": "点省份中占比达15.5%；2026年第一季度，全区算力规模较去年年底增长18%。绿能上，全区新能源装机规模达1.74亿千瓦，数据中心绿电使用比例超过80%，实现“以电强算、以算促电”的双向赋能。网络上，已建成国家级"
     },
     {
-      "sourceId": "china_power_green_compute",
-      "source": "中国电力报：绿电支撑算力发展",
-      "url": "https://www.chinapower.org.cn/detail/457602.html",
-      "metric": "算力规模",
-      "value": "12.5",
-      "unit": "万P",
-      "snippet": "地，具有丰富的风光资源，同时也是全国重要的算力基础设施集聚区。截至2025年底，和林格尔新区算力总规模达到12.5万P（每秒千万亿次浮点运算能力），在全国八大枢纽十大集群21个片区中排名第一，以智能算力为主导，"
+      "sourceId": "people_energy_report",
+      "source": "人民日报：中国能源报绿色算力报道",
+      "url": "https://paper.people.com.cn/zgnyb/pad/content/202507/21/content_30089680.html",
+      "metric": "新能源装机",
+      "value": "8.48",
+      "unit": "亿千瓦",
+      "snippet": "兆瓦光伏，45兆瓦/180兆瓦时的储能系统，以及配套建设的220千伏升压站。项目投运后，风光新能源发电量年可达8.48亿千瓦时，相当于减排二氧化碳约48万吨，标志着内蒙古在构建“东数西算”绿色算力枢纽方面取得重要突破"
     },
     {
-      "sourceId": "china_power_green_compute",
-      "source": "中国电力报：绿电支撑算力发展",
-      "url": "https://www.chinapower.org.cn/detail/457602.html",
-      "metric": "算力规模",
-      "value": "4.8",
+      "sourceId": "xinhua_green_compute",
+      "source": "新华社：草原云谷 数智奔涌",
+      "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+      "metric": "公开指标",
+      "value": "12.6",
       "unit": "万P",
-      "snippet": "年底完成建设。”呼和浩特和林格尔新区华电能源有限公司总经理李超介绍，以上三期风光电项目对应的算力总规模达4.8万P，其中智能算力占比突出。 李超指着场站的监控大屏说，凭借新区冷凉气候优势与技术优化，和林格尔"
+      "snippet": "扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…"
     }
   ],
   "cityDetails": [
@@ -768,22 +768,22 @@
         "snippet": "点省份中占比达15.5%；2026年第一季度，全区算力规模较去年年底增长18%。绿能上，全区新能源装机规模达1.74亿千瓦，数据中心绿电使用比例超过80%，实现“以电强算、以算促电”的双向赋能。网络上，已建成国家级"
       },
       {
-        "sourceId": "china_power_green_compute",
-        "source": "中国电力报：绿电支撑算力发展",
-        "url": "https://www.chinapower.org.cn/detail/457602.html",
-        "metric": "算力规模",
-        "value": "12.5",
-        "unit": "万P",
-        "snippet": "地，具有丰富的风光资源，同时也是全国重要的算力基础设施集聚区。截至2025年底，和林格尔新区算力总规模达到12.5万P（每秒千万亿次浮点运算能力），在全国八大枢纽十大集群21个片区中排名第一，以智能算力为主导，"
+        "sourceId": "people_energy_report",
+        "source": "人民日报：中国能源报绿色算力报道",
+        "url": "https://paper.people.com.cn/zgnyb/pad/content/202507/21/content_30089680.html",
+        "metric": "新能源装机",
+        "value": "8.48",
+        "unit": "亿千瓦",
+        "snippet": "兆瓦光伏，45兆瓦/180兆瓦时的储能系统，以及配套建设的220千伏升压站。项目投运后，风光新能源发电量年可达8.48亿千瓦时，相当于减排二氧化碳约48万吨，标志着内蒙古在构建“东数西算”绿色算力枢纽方面取得重要突破"
       },
       {
-        "sourceId": "china_power_green_compute",
-        "source": "中国电力报：绿电支撑算力发展",
-        "url": "https://www.chinapower.org.cn/detail/457602.html",
-        "metric": "算力规模",
-        "value": "4.8",
+        "sourceId": "xinhua_green_compute",
+        "source": "新华社：草原云谷 数智奔涌",
+        "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+        "metric": "公开指标",
+        "value": "12.6",
         "unit": "万P",
-        "snippet": "年底完成建设。”呼和浩特和林格尔新区华电能源有限公司总经理李超介绍，以上三期风光电项目对应的算力总规模达4.8万P，其中智能算力占比突出。 李超指着场站的监控大屏说，凭借新区冷凉气候优势与技术优化，和林格尔"
+        "snippet": "扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…"
       }
     ]
   },
@@ -836,6 +836,15 @@
     },
     {
       "year": "2024",
+      "hub": 50.0,
+      "nonHub": 87.7,
+      "carbon": 15967.6,
+      "green": 77.0,
+      "compute": 11.3,
+      "pue": 1.37
+    },
+    {
+      "year": "2025",
       "hub": 45.0,
       "nonHub": 84.5,
       "carbon": 10693.0,
@@ -1338,6 +1347,12 @@
       },
       {
         "year": "2024",
+        "score": 74.8,
+        "pue": 1.37,
+        "green": 77.0
+      },
+      {
+        "year": "2025",
         "score": 89.1,
         "pue": 1.28,
         "green": 84.6
@@ -1984,7 +1999,7 @@
           "name": "新华社：草原云谷 数智奔涌",
           "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
           "ok": true,
-          "fetchedAt": "2026-05-02T16:21:29",
+          "fetchedAt": "2026-05-04T13:36:42",
           "year": 2025,
           "error": ""
         },
@@ -1993,7 +2008,7 @@
           "name": "数字中国：内蒙古绿色算力大基地建设",
           "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
           "ok": true,
-          "fetchedAt": "2026-05-02T16:21:29",
+          "fetchedAt": "2026-05-04T13:36:43",
           "year": 2025,
           "error": ""
         },
@@ -2002,7 +2017,7 @@
           "name": "内蒙古自治区政府：能源战略资源基地建设",
           "url": "https://www.nmg.gov.cn/ztzl/tjlswdrw/nyzlzyjd/202505/t20250516_2723662.html",
           "ok": true,
-          "fetchedAt": "2026-05-02T16:21:30",
+          "fetchedAt": "2026-05-04T13:36:48",
           "year": 2025,
           "error": ""
         },
@@ -2011,7 +2026,7 @@
           "name": "人民日报：中国能源报绿色算力报道",
           "url": "https://paper.people.com.cn/zgnyb/pad/content/202507/21/content_30089680.html",
           "ok": true,
-          "fetchedAt": "2026-05-02T16:21:32",
+          "fetchedAt": "2026-05-04T13:36:53",
           "year": 2025,
           "error": ""
         }
@@ -2142,6 +2157,150 @@
           "value": "8.48",
           "unit": "亿千瓦",
           "snippet": "兆瓦光伏，45兆瓦/180兆瓦时的储能系统，以及配套建设的220千伏升压站。项目投运后，风光新能源发电量年可达8.48亿千瓦时，相当于减排二氧化碳约48万吨，标志着内蒙古在构建“东数西算”绿色算力枢纽方面取得重要突破"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "12.6",
+          "unit": "万P",
+          "snippet": "扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "11.6",
+          "unit": "万P",
+          "snippet": "建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "84.57",
+          "unit": "%",
+          "snippet": "社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们对内蒙古绿色算力产业发展前景充满信心。 2023年，《国"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "6",
+          "unit": "个",
+          "snippet": "中心机房，黑色机柜整齐排列，服务器闪烁着灯光。年均7摄氏度的适宜气温，可保障这里的设备每年有6个月实现自然冷却。 呼和浩特市和林格尔新区、乌兰察布市集宁大数据产业园是和林格尔数据中心集群重"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "12.2",
+          "unit": "亿度",
+          "snippet": "心绿电占比，全力打造全国绿色算力保障基地和大模型训练推理基地。今年一季度，集群内数据中心用电12.2亿度，绿电占比高达84.57%，有效降低用电成本。 “东数西算”工程“含绿量”的提升，离不开内蒙"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "1.35",
+          "unit": "亿千瓦",
+          "snippet": "力。据内蒙古自治区能源局局长曹思阳介绍，2024年，内蒙古风力、光伏等新能源累计装机规模突破1.35亿千瓦，超越火电装机量，新能源总装机、新增装机、发电量等多项指标稳居全国首位。 这是2023年8月"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "100",
+          "unit": "万千瓦",
+          "snippet": "指标稳居全国首位。 这是2023年8月23日拍摄的内蒙古自治区鄂尔多斯市达拉特旗一处装机规模100万千瓦的光伏基地。新华社发（杨耀中 摄） 草原深处，白色风机与光伏矩阵将塞北“风光”源源不断地转化"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "7380",
+          "unit": "吨",
+          "snippet": "智算中心，机房产生的热量被回收，用于供暖，每年可回收废热78000吉焦，减少二氧化碳排放量约7380吨。 为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等方面发力。同时，内蒙古"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "79",
+          "unit": "个",
+          "snippet": "前，内蒙古已构建起涵盖上游、中游、下游的绿色算力全产业链，覆盖通算、智算、超算多元算力体系，79个数据中心项目落地生根，2800亿元投资构筑起数字时代新基座。 内蒙古自治区政务服务与数据管理"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "2800",
+          "unit": "亿元",
+          "snippet": "中游、下游的绿色算力全产业链，覆盖通算、智算、超算多元算力体系，79个数据中心项目落地生根，2800亿元投资构筑起数字时代新基座。 内蒙古自治区政务服务与数据管理局数字经济发展处处长张蕾介绍，在产"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "18",
+          "unit": "个",
+          "snippet": "设，并引进算力设备制造企业，包含服务器、半导体、通信设备、传感器、电子专用装备等生产制造项目18个。 这是2025年5月20日拍摄的中国移动智算中心（呼和浩特）（无人机照片）。新华社发（陈前"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "150",
+          "unit": "个",
+          "snippet": "算中心（呼和浩特）（无人机照片）。新华社发（陈前 摄） 在和林格尔数据中心集群中，占地相当于150个足球场的中国移动智算中心（呼和浩特），是全球运营商最大单体液冷智算中心，正以每秒670亿亿次"
+        },
+        {
+          "sourceId": "xinhua_green_compute",
+          "source": "新华社：草原云谷 数智奔涌",
+          "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+          "metric": "公开指标",
+          "value": "24.7",
+          "unit": "%",
+          "snippet": "统谋划算力、数据、算法、应用全产业链发展。去年，信息传输软件和信息服务业对GDP增速贡献率达24.7%。” 数字经济的快速发展，也催生出大量就业机会。位于乌兰察布市的内蒙古中研智达信息技术有限公"
+        },
+        {
+          "sourceId": "digital_china",
+          "source": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "metric": "公开指标",
+          "value": "6",
+          "unit": "个",
+          "snippet": "色机柜与闪烁的服务器灯光，彰显着科技力量。年均7摄氏度的适宜气候，可保障这里的数据中心每年有6个月实现自然冷却；每度约0.35元的到户电价，加上80%的绿电使用比例，让项目用电成本相比北京"
+        },
+        {
+          "sourceId": "digital_china",
+          "source": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "metric": "公开指标",
+          "value": "80",
+          "unit": "%",
+          "snippet": "度的适宜气候，可保障这里的数据中心每年有6个月实现自然冷却；每度约0.35元的到户电价，加上80%的绿电使用比例，让项目用电成本相比北京降低约三分之二。 内蒙古自治区能源局局长曹思扬介绍，2"
+        },
+        {
+          "sourceId": "digital_china",
+          "source": "数字中国：内蒙古绿色算力大基地建设",
+          "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+          "metric": "公开指标",
+          "value": "1.35",
+          "unit": "亿千瓦",
+          "snippet": "降低约三分之二。 内蒙古自治区能源局局长曹思扬介绍，2024年，内蒙古新能源累计装机规模突破1.35亿千瓦，超越火电装机量，新能源总装机、新增装机、发电量等多项指标稳居全国首位。 数据中心是算力产业"
         }
       ],
       "rawFacts": {
@@ -2290,10 +2449,154 @@
             "value": "8.48",
             "unit": "亿千瓦",
             "snippet": "兆瓦光伏，45兆瓦/180兆瓦时的储能系统，以及配套建设的220千伏升压站。项目投运后，风光新能源发电量年可达8.48亿千瓦时，相当于减排二氧化碳约48万吨，标志着内蒙古在构建“东数西算”绿色算力枢纽方面取得重要突破"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "12.6",
+            "unit": "万P",
+            "snippet": "扎实推进绿色算力大基地建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先…"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "11.6",
+            "unit": "万P",
+            "snippet": "建设 2025-05-30 15:24:58 来源：新华社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "84.57",
+            "unit": "%",
+            "snippet": "社 算力规模达12.6万P，其中智算11.6万P，规模居全国第一；集群内数据中心绿电占比达到84.57%，在全国领先……一系列亮眼数据让人们对内蒙古绿色算力产业发展前景充满信心。 2023年，《国"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "6",
+            "unit": "个",
+            "snippet": "中心机房，黑色机柜整齐排列，服务器闪烁着灯光。年均7摄氏度的适宜气温，可保障这里的设备每年有6个月实现自然冷却。 呼和浩特市和林格尔新区、乌兰察布市集宁大数据产业园是和林格尔数据中心集群重"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "12.2",
+            "unit": "亿度",
+            "snippet": "心绿电占比，全力打造全国绿色算力保障基地和大模型训练推理基地。今年一季度，集群内数据中心用电12.2亿度，绿电占比高达84.57%，有效降低用电成本。 “东数西算”工程“含绿量”的提升，离不开内蒙"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "1.35",
+            "unit": "亿千瓦",
+            "snippet": "力。据内蒙古自治区能源局局长曹思阳介绍，2024年，内蒙古风力、光伏等新能源累计装机规模突破1.35亿千瓦，超越火电装机量，新能源总装机、新增装机、发电量等多项指标稳居全国首位。 这是2023年8月"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "100",
+            "unit": "万千瓦",
+            "snippet": "指标稳居全国首位。 这是2023年8月23日拍摄的内蒙古自治区鄂尔多斯市达拉特旗一处装机规模100万千瓦的光伏基地。新华社发（杨耀中 摄） 草原深处，白色风机与光伏矩阵将塞北“风光”源源不断地转化"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "7380",
+            "unit": "吨",
+            "snippet": "智算中心，机房产生的热量被回收，用于供暖，每年可回收废热78000吉焦，减少二氧化碳排放量约7380吨。 为推动绿色算力产业发展，内蒙古出台专项政策，从产业布局、电力保障等方面发力。同时，内蒙古"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "79",
+            "unit": "个",
+            "snippet": "前，内蒙古已构建起涵盖上游、中游、下游的绿色算力全产业链，覆盖通算、智算、超算多元算力体系，79个数据中心项目落地生根，2800亿元投资构筑起数字时代新基座。 内蒙古自治区政务服务与数据管理"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "2800",
+            "unit": "亿元",
+            "snippet": "中游、下游的绿色算力全产业链，覆盖通算、智算、超算多元算力体系，79个数据中心项目落地生根，2800亿元投资构筑起数字时代新基座。 内蒙古自治区政务服务与数据管理局数字经济发展处处长张蕾介绍，在产"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "18",
+            "unit": "个",
+            "snippet": "设，并引进算力设备制造企业，包含服务器、半导体、通信设备、传感器、电子专用装备等生产制造项目18个。 这是2025年5月20日拍摄的中国移动智算中心（呼和浩特）（无人机照片）。新华社发（陈前"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "150",
+            "unit": "个",
+            "snippet": "算中心（呼和浩特）（无人机照片）。新华社发（陈前 摄） 在和林格尔数据中心集群中，占地相当于150个足球场的中国移动智算中心（呼和浩特），是全球运营商最大单体液冷智算中心，正以每秒670亿亿次"
+          },
+          {
+            "sourceId": "xinhua_green_compute",
+            "source": "新华社：草原云谷 数智奔涌",
+            "url": "https://www.news.cn/politics/20250530/e5da7c9099b04454a53b00502b5c6fca/c.html",
+            "metric": "公开指标",
+            "value": "24.7",
+            "unit": "%",
+            "snippet": "统谋划算力、数据、算法、应用全产业链发展。去年，信息传输软件和信息服务业对GDP增速贡献率达24.7%。” 数字经济的快速发展，也催生出大量就业机会。位于乌兰察布市的内蒙古中研智达信息技术有限公"
+          },
+          {
+            "sourceId": "digital_china",
+            "source": "数字中国：内蒙古绿色算力大基地建设",
+            "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+            "metric": "公开指标",
+            "value": "6",
+            "unit": "个",
+            "snippet": "色机柜与闪烁的服务器灯光，彰显着科技力量。年均7摄氏度的适宜气候，可保障这里的数据中心每年有6个月实现自然冷却；每度约0.35元的到户电价，加上80%的绿电使用比例，让项目用电成本相比北京"
+          },
+          {
+            "sourceId": "digital_china",
+            "source": "数字中国：内蒙古绿色算力大基地建设",
+            "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+            "metric": "公开指标",
+            "value": "80",
+            "unit": "%",
+            "snippet": "度的适宜气候，可保障这里的数据中心每年有6个月实现自然冷却；每度约0.35元的到户电价，加上80%的绿电使用比例，让项目用电成本相比北京降低约三分之二。 内蒙古自治区能源局局长曹思扬介绍，2"
+          },
+          {
+            "sourceId": "digital_china",
+            "source": "数字中国：内蒙古绿色算力大基地建设",
+            "url": "https://www.digitalchina.gov.cn/2025/szzg/xyzx/202506/t20250616_5033818.htm",
+            "metric": "公开指标",
+            "value": "1.35",
+            "unit": "亿千瓦",
+            "snippet": "降低约三分之二。 内蒙古自治区能源局局长曹思扬介绍，2024年，内蒙古新能源累计装机规模突破1.35亿千瓦，超越火电装机量，新能源总装机、新增装机、发电量等多项指标稳居全国首位。 数据中心是算力产业"
           }
         ]
       },
-      "generatedAt": "2026-05-02T16:21:32",
+      "generatedAt": "2026-05-04T13:36:54",
       "method": "后端按 2025 年公开网页实时爬取，并用抓取到的核心指标生成绿色算力页面数据"
     }
   }

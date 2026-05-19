@@ -11,7 +11,10 @@ import { LmdiDecomposition } from './pages/LmdiDecomposition';
 import { DidModel } from './pages/DidModel';
 import { GreenCompute } from './pages/GreenCompute';
 import { GeoMap } from './pages/GeoMap';
+import { AiAssistant } from './pages/AiAssistant';
 import { type AuthUser, readAuthUser } from './lib/auth';
+
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`.replace(/\/{2,}/g, '/');
 
 function TitleSync() {
   const location = useLocation();
@@ -25,8 +28,12 @@ function TitleSync() {
       '/did': 'DID模型分析',
       '/green-compute': '绿色算力评估',
       '/simulation': '政策模拟',
+      '/policy': '政策模拟',
       '/geo-map': '地理可视化',
+      '/ai': 'AI问答',
+      '/deepseek': 'AI问答',
       '/data': '数据管理',
+      '/data-management': '数据管理',
     };
 
     const matchedTitle =
@@ -52,11 +59,16 @@ function AppLayout() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 font-sans text-slate-900">
+    <div className="relative isolate min-h-screen flex flex-col bg-slate-50 font-sans text-slate-900">
       <TitleSync />
+      <div
+        className="pointer-events-none absolute inset-0 z-0 system-ambient-bg"
+        style={{ backgroundImage: `url(${assetUrl('images/data-preview-bg.png')})` }}
+      />
+      <div className="pointer-events-none absolute inset-0 z-0 system-ambient-tint" />
       <TopNav user={user} />
       <ToastHost />
-      <div className="flex-1 overflow-y-auto">
+      <div className="relative z-10 flex-1 overflow-y-auto">
         <Routes>
           <Route path="/" element={<Navigate to="/overview" replace />} />
           <Route path="/overview" element={<Overview />} />
@@ -64,8 +76,12 @@ function AppLayout() {
           <Route path="/did" element={<DidModel />} />
           <Route path="/green-compute" element={<GreenCompute />} />
           <Route path="/simulation" element={<PolicySimulation />} />
+          <Route path="/policy" element={<Navigate to="/simulation" replace />} />
           <Route path="/geo-map" element={<GeoMap />} />
+          <Route path="/ai" element={<AiAssistant />} />
+          <Route path="/deepseek" element={<Navigate to="/ai" replace />} />
           <Route path="/data" element={user.role === 'admin' ? <DataManagement /> : <Navigate to="/overview" replace />} />
+          <Route path="/data-management" element={<Navigate to="/data" replace />} />
           <Route path="*" element={<Navigate to="/overview" replace />} />
         </Routes>
       </div>

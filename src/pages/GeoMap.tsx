@@ -180,6 +180,36 @@ const REGION_LABEL_OFFSETS: Record<string, { dx: number; dy: number }> = {
   阿拉善盟: { dx: -16, dy: 0 },
 };
 
+const REGION_METRIC_LABEL_OFFSETS: Record<string, { dx: number; dy: number }> = {
+  呼和浩特市: { dx: 14, dy: -6 },
+  包头市: { dx: -14, dy: -4 },
+  乌海市: { dx: 0, dy: 2 },
+  赤峰市: { dx: 14, dy: 2 },
+  通辽市: { dx: 12, dy: 0 },
+  鄂尔多斯市: { dx: 10, dy: 4 },
+  呼伦贝尔市: { dx: 0, dy: 8 },
+  巴彦淖尔市: { dx: -12, dy: -2 },
+  乌兰察布市: { dx: 14, dy: -8 },
+  兴安盟: { dx: 10, dy: -6 },
+  锡林郭勒盟: { dx: 0, dy: 8 },
+  阿拉善盟: { dx: -14, dy: 4 },
+};
+
+const REGION_PASTEL_COLORS: Record<string, string> = {
+  呼和浩特市: '#f7ed9d',
+  包头市: '#f6b6ba',
+  乌海市: '#f3c48e',
+  赤峰市: '#f1c9a8',
+  通辽市: '#f8bfc9',
+  鄂尔多斯市: '#f8c999',
+  呼伦贝尔市: '#c9ecc5',
+  巴彦淖尔市: '#cde9ee',
+  乌兰察布市: '#dff1b6',
+  兴安盟: '#d6efcc',
+  锡林郭勒盟: '#c7e8e9',
+  阿拉善盟: '#ddd3f2',
+};
+
 function buildEnergyFlow(greenShare: number) {
   const green = Number(greenShare.toFixed(1));
   const thermal = Number(Math.max(0, 100 - green).toFixed(1));
@@ -315,28 +345,9 @@ function findHubByRegion(hubs: HubPoint[], name = '') {
   return hubs.find((item) => name.includes(item.city));
 }
 
-function fillByLayer(metric: RegionMetric | undefined, activeLayer: string, selected: boolean) {
-  if (selected) return '#bbf7d0';
-  if (!metric) return '#f8fafc';
-
-  if (activeLayer === '绿电占比') {
-    if (metric.green >= 82) return '#bbf7d0';
-    if (metric.green >= 72) return '#dcfce7';
-    if (metric.green >= 65) return '#ecfdf5';
-    return '#fef3c7';
-  }
-
-  if (activeLayer === 'PUE 热度') {
-    if (metric.pue <= 1.2) return '#dbeafe';
-    if (metric.pue <= 1.28) return '#e0f2fe';
-    if (metric.pue <= 1.33) return '#fef3c7';
-    return '#fee2e2';
-  }
-
-  if (metric.carbon <= 1.6) return '#d1fae5';
-  if (metric.carbon <= 2.05) return '#fef3c7';
-  if (metric.carbon <= 2.25) return '#fed7aa';
-  return '#fecaca';
+function fillByRegion(name = '', selected: boolean) {
+  if (selected) return '#fff4a8';
+  return REGION_PASTEL_COLORS[name] ?? '#edf2f7';
 }
 
 function metricText(metric: RegionMetric | undefined, activeLayer: string) {
@@ -344,6 +355,50 @@ function metricText(metric: RegionMetric | undefined, activeLayer: string) {
   if (activeLayer === '绿电占比') return `${metric.green}% 绿电`;
   if (activeLayer === 'PUE 热度') return `PUE ${metric.pue}`;
   return `${metric.carbon} 碳强度`;
+}
+
+function metricShortText(metric: RegionMetric | undefined, activeLayer: string) {
+  if (!metric) return '--';
+  if (activeLayer === '绿电占比') return `${metric.green}%`;
+  if (activeLayer === 'PUE 热度') return metric.pue.toFixed(2);
+  return metric.carbon.toFixed(2);
+}
+
+function metricLayerStyle(activeLayer: string) {
+  if (activeLayer === '绿电占比') return { fill: '#10b981', stroke: '#86efac', text: '#047857' };
+  if (activeLayer === 'PUE 热度') return { fill: '#0ea5e9', stroke: '#7dd3fc', text: '#0369a1' };
+  return { fill: '#ff9800', stroke: '#ffd180', text: '#b45309' };
+}
+
+function metricLabelWidth(activeLayer: string) {
+  return activeLayer === '绿电占比' ? 58 : 48;
+}
+
+function metricLabelPosition(name: string, label: { x: number; y: number }) {
+  const offset = REGION_METRIC_LABEL_OFFSETS[name] ?? { dx: 0, dy: 0 };
+
+  return {
+    x: label.x + offset.dx,
+    y: label.y + 22 + offset.dy,
+  };
+}
+
+function layerButtonClass(layer: string, active: boolean) {
+  if (layer === '绿电占比') {
+    return active
+      ? 'bg-emerald-600 text-white'
+      : 'bg-emerald-50 text-emerald-700 hover:bg-emerald-100';
+  }
+
+  if (layer === 'PUE 热度') {
+    return active
+      ? 'bg-sky-600 text-white'
+      : 'bg-sky-50 text-sky-700 hover:bg-sky-100';
+  }
+
+  return active
+    ? 'bg-[#ff9800] text-white'
+    : 'bg-amber-50 text-amber-700 hover:bg-amber-100';
 }
 
 export function GeoMap() {
@@ -483,7 +538,7 @@ export function GeoMap() {
               className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-700 shadow-sm transition-colors hover:bg-slate-100"
             >
               <Layers3 className="h-4 w-4" />
-              图层切换
+              图层：{activeLayer}
             </button>
             <button
               type="button"
@@ -537,9 +592,9 @@ export function GeoMap() {
         <div className="flex h-full flex-col gap-5">
           <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
           <div className="absolute left-5 top-5 z-20 rounded-lg border border-slate-200 bg-white/95 px-4 py-3 shadow-sm backdrop-blur">
-            <div className="text-xs font-bold text-slate-500">真实地图图层</div>
+            <div className="text-xs font-bold text-slate-500">指标标签图层</div>
             <div className="mt-2 flex flex-wrap gap-2">
-              {layerLabels.map((item, index) => (
+              {layerLabels.map((item) => (
                 <button
                   key={item}
                   type="button"
@@ -547,15 +602,7 @@ export function GeoMap() {
                     setActiveLayer(item);
                     notify(`已切换图层：${item}`);
                   }}
-                  className={`rounded-full px-3 py-1 text-[11px] font-bold transition-colors ${
-                    item === activeLayer
-                      ? 'bg-slate-900 text-white'
-                      : index === 0
-                        ? 'bg-emerald-50 text-emerald-700'
-                        : index === 1
-                          ? 'bg-sky-50 text-sky-700'
-                          : 'bg-amber-50 text-amber-700'
-                  }`}
+                  className={`rounded-full px-3 py-1 text-[11px] font-bold transition-colors ${layerButtonClass(item, item === activeLayer)}`}
                 >
                   {item}
                 </button>
@@ -618,15 +665,59 @@ export function GeoMap() {
                         <path
                           key={feature.properties.adcode || name}
                           d={d}
-                          fill={fillByLayer(metric, activeLayer, selectedRegion)}
-                          stroke={selectedRegion ? '#059669' : '#cbd5e1'}
-                          strokeWidth={selectedRegion ? 2.4 : 1.2}
+                          fill={fillByRegion(name, selectedRegion)}
+                          stroke={selectedRegion ? '#ef4444' : '#94a3b8'}
+                          strokeWidth={selectedRegion ? 2.6 : 1.15}
                           fillRule="evenodd"
-                          className="cursor-pointer transition-colors hover:fill-emerald-100"
+                          className="cursor-pointer transition-colors hover:fill-yellow-100"
                           onClick={() => handleRegionClick(feature)}
                         >
                           <title>{`${name} / ${metricText(metric, activeLayer)}`}</title>
                         </path>
+                      );
+                    })}
+                  </g>
+
+                  <g className="pointer-events-none">
+                    {geoData.features.map((feature) => {
+                      const name = feature.properties.name || '';
+                      const metric = findRegionMetric(regionMetrics, name);
+                      const label = featureLabelPoint(feature, project);
+                      if (!label) return null;
+
+                      const style = metricLayerStyle(activeLayer);
+                      const width = metricLabelWidth(activeLayer);
+                      const x = -width / 2;
+                      const position = metricLabelPosition(name, label);
+
+                      return (
+                        <g key={`metric-${feature.properties.adcode || name}`} transform={`translate(${position.x} ${position.y})`}>
+                          <rect
+                            x={x}
+                            y={1}
+                            width={width}
+                            height={18}
+                            rx={9}
+                            fill="rgba(255,255,255,0.86)"
+                            stroke={style.stroke}
+                            strokeWidth={1}
+                          />
+                          <circle
+                            cx={x + 10}
+                            cy={10}
+                            r={3}
+                            fill={style.fill}
+                          />
+                          <text
+                            x={x + width / 2 + 5}
+                            y={14}
+                            textAnchor="middle"
+                            fill={style.text}
+                            className="select-none text-[9px] font-black"
+                          >
+                            {metricShortText(metric, activeLayer)}
+                          </text>
+                        </g>
                       );
                     })}
                   </g>

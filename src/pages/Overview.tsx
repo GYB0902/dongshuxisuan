@@ -36,12 +36,23 @@ import { downloadCsv, notify } from '../lib/actions';
 import { useLiveOverview } from '../lib/liveData';
 
 const TREND_DATA = [
-  { year: '2020', hub: 100, nonHub: 120, carbon: 6400, green: 35.2 },
-  { year: '2021', hub: 85, nonHub: 115, carbon: 6120, green: 45.8 },
-  { year: '2022', hub: 70, nonHub: 105, carbon: 5840, green: 58.3 },
-  { year: '2023', hub: 55, nonHub: 95, carbon: 5480, green: 72.5 },
-  { year: '2024', hub: 45, nonHub: 85, carbon: 5210, green: 84.57 },
+  { year: '2020', hub: 77.5, nonHub: 105.4, carbon: 45271.1, green: 34.7, compute: 5.3, pue: 1.83 },
+  { year: '2021', hub: 70.3, nonHub: 100.8, carbon: 37652.2, green: 45.7, compute: 6.8, pue: 1.74 },
+  { year: '2022', hub: 63.2, nonHub: 96.2, carbon: 30033.3, green: 56.7, compute: 8.7, pue: 1.63 },
+  { year: '2023', hub: 55.5, nonHub: 91.2, carbon: 21828.3, green: 68.5, compute: 10.8, pue: 1.5 },
+  { year: '2024', hub: 50.0, nonHub: 87.7, carbon: 14365.0, green: 77.0, compute: 11.3, pue: 1.37 },
+  { year: '2025', hub: 45.0, nonHub: 84.5, carbon: 10693.0, green: 84.6, compute: 12.6, pue: 1.28 },
 ];
+
+function normalizeTrendData(data?: typeof TREND_DATA) {
+  const byYear = new Map(TREND_DATA.map((item) => [item.year, item]));
+
+  data?.forEach((item) => {
+    byYear.set(item.year, item);
+  });
+
+  return TREND_DATA.map((item) => byYear.get(item.year) ?? item);
+}
 
 const RANKINGS = [
   { id: 1, city: '乌兰察布', score: 98.4, pue: 1.14, green: 88.5 },
@@ -131,7 +142,7 @@ export function Overview() {
     [currentHub, liveData],
   );
   const greenShare = Number(currentHub.green.toFixed(1));
-  const trendData = liveData?.trendData ?? TREND_DATA;
+  const trendData = normalizeTrendData(liveData?.trendData);
   const rankings = liveData?.rankings ?? RANKINGS;
   const lmdiEffects = liveData?.lmdiEffects ?? LMDI_EFFECTS;
   const didBars = liveData?.didBars ?? DID_BARS;
@@ -193,29 +204,29 @@ export function Overview() {
   };
 
   return (
-    <div className="mx-auto flex w-full max-w-[1800px] flex-col gap-5 p-6 md:p-8">
-      <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-        <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+    <div className="mx-auto flex w-full max-w-[1680px] flex-col gap-4 p-4 md:p-5">
+      <section className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+        <div className="flex flex-col gap-3 xl:flex-row xl:items-end xl:justify-between">
           <div>
             <div className="flex items-center gap-2 text-xs font-bold text-emerald-700">
               <Cloud className="h-4 w-4" />
               东数西算 · 内蒙古枢纽监测中心
             </div>
-            <h2 className="mt-2 text-2xl font-black text-slate-900 md:text-3xl">
+            <h2 className="mt-1.5 text-xl font-black text-slate-900 md:text-2xl">
               东数西算碳排放与绿色算力评估
             </h2>
-            <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-500">
+            <p className="mt-1.5 max-w-3xl text-xs leading-5 text-slate-500">
               聚焦内蒙古枢纽节点，联动碳排放、绿电占比、算力规模、PUE与政策效应，形成一体化监测视图。
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2">
             <div className="rounded-lg border border-emerald-100 bg-emerald-50 px-3 py-2 text-xs font-bold text-emerald-700">
               {loading ? 'API 同步中' : error ? 'API 未连接' : `实爬来源 ${sourceCount} 个`}
             </div>
             <button
               type="button"
               onClick={handleRefresh}
-              className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition-colors hover:bg-slate-50"
+              className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 shadow-sm transition-colors hover:bg-slate-50"
             >
               <RefreshCcw className="h-4 w-4" />
               重新爬取
@@ -223,7 +234,7 @@ export function Overview() {
             <button
               type="button"
               onClick={handleExport}
-              className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-emerald-700"
+              className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-sm transition-colors hover:bg-emerald-700"
             >
               <Download className="h-4 w-4" />
               导出报告
@@ -232,80 +243,80 @@ export function Overview() {
         </div>
       </section>
 
-      <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-start justify-between">
+      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-start justify-between">
             <div className="text-xs font-bold text-slate-500">总碳排放量</div>
-            <Cloud className="h-5 w-5 text-emerald-600" />
+            <Cloud className="h-4 w-4 text-emerald-600" />
           </div>
           <div className="flex items-baseline gap-2">
-            <div className="text-4xl font-black text-slate-900">{carbonEmission.toLocaleString('zh-CN')}</div>
+            <div className="text-3xl font-black text-slate-900">{carbonEmission.toLocaleString('zh-CN')}</div>
             <div className="text-sm text-slate-500">万吨</div>
           </div>
-          <div className="mt-4 flex items-center gap-2 text-xs font-bold text-red-600">
+          <div className="mt-3 flex items-center gap-2 text-xs font-bold text-red-600">
             <TrendingUp className="h-4 w-4" />
             后端实时计算
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-start justify-between">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-start justify-between">
             <div className="text-xs font-bold text-slate-500">碳强度变化</div>
-            <TrendingDown className="h-5 w-5 text-emerald-600" />
+            <TrendingDown className="h-4 w-4 text-emerald-600" />
           </div>
           <div className="flex items-baseline gap-2">
-            <div className="text-4xl font-black text-emerald-600">{carbonChange}</div>
+            <div className="text-3xl font-black text-emerald-600">{carbonChange}</div>
             <div className="text-sm text-slate-500">%</div>
           </div>
-          <div className="mt-4 flex items-center gap-2 text-xs font-bold text-emerald-600">
+          <div className="mt-3 flex items-center gap-2 text-xs font-bold text-emerald-600">
             <CheckCircle2 className="h-4 w-4" />
             绿色转型目标推进中
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-start justify-between">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-start justify-between">
             <div className="text-xs font-bold text-slate-500">绿电占比</div>
-            <Percent className="h-5 w-5 text-emerald-600" />
+            <Percent className="h-4 w-4 text-emerald-600" />
           </div>
           <div className="flex items-baseline gap-2">
-            <div className="text-4xl font-black text-slate-900">{greenShare}</div>
+            <div className="text-3xl font-black text-slate-900">{greenShare}</div>
             <div className="text-sm text-slate-500">%</div>
           </div>
-          <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-100">
+          <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-slate-100">
             <div className="h-full rounded-full bg-emerald-600" style={{ width: `${greenShare}%` }} />
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-start justify-between">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-start justify-between">
             <div className="text-xs font-bold text-slate-500">总算力规模</div>
-            <Server className="h-5 w-5 text-emerald-600" />
+            <Server className="h-4 w-4 text-emerald-600" />
           </div>
           <div className="flex items-baseline gap-2">
-            <div className="text-4xl font-black text-slate-900">{computeTotal}</div>
+            <div className="text-3xl font-black text-slate-900">{computeTotal}</div>
             <div className="text-sm text-slate-500">万P</div>
           </div>
-          <div className="mt-4 flex items-center gap-2 text-xs font-bold text-slate-500">
+          <div className="mt-3 flex items-center gap-2 text-xs font-bold text-slate-500">
             <span className="h-2 w-2 rounded-full bg-emerald-500" />
             智算 {liveData?.kpis.aiCompute ?? 11.6} 万P
           </div>
         </div>
       </section>
 
-      <section className="grid gap-5 xl:grid-cols-[1.05fr_1.15fr_0.9fr]">
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-center justify-between">
+      <section className="grid gap-4 xl:grid-cols-[1.05fr_1.15fr_0.9fr]">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-slate-900">碳排放趋势</h3>
-              <p className="text-sm text-slate-500">枢纽与非枢纽城市对比</p>
+              <h3 className="text-base font-bold text-slate-900">碳排放趋势</h3>
+              <p className="text-xs text-slate-500">枢纽与非枢纽城市对比</p>
             </div>
           </div>
-          <div className="h-[340px] w-full">
+          <div className="h-[285px] w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={trendData} margin={{ top: 10, right: 0, left: -10, bottom: 0 }}>
+              <LineChart data={trendData} margin={{ top: 10, right: 18, left: -10, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
-                <XAxis dataKey="year" axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 12 }} dy={10} />
+                <XAxis dataKey="year" interval={0} axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 12 }} dy={10} />
                 <YAxis axisLine={false} tickLine={false} tick={{ fill: '#64748b', fontSize: 12 }} dx={-10} />
                 <Tooltip {...tooltipStyle()} />
                 <Legend />
@@ -316,11 +327,11 @@ export function Overview() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-center justify-between">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-slate-900">数据中心热力图</h3>
-              <p className="text-sm text-slate-500">内蒙古枢纽节点分布</p>
+              <h3 className="text-base font-bold text-slate-900">数据中心热力图</h3>
+              <p className="text-xs text-slate-500">内蒙古枢纽节点分布</p>
             </div>
             <MapPin className="h-5 w-5 text-emerald-600" />
           </div>
@@ -365,17 +376,17 @@ export function Overview() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4">
-            <h3 className="text-lg font-bold text-slate-900">城市绿色算力排名</h3>
-            <p className="text-sm text-slate-500">绿电、PUE与综合评分</p>
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3">
+            <h3 className="text-base font-bold text-slate-900">城市绿色算力排名</h3>
+            <p className="text-xs text-slate-500">绿电、PUE与综合评分</p>
           </div>
-          <div className="scroll-panel max-h-[430px] space-y-3 overflow-y-auto pr-2">
+          <div className="scroll-panel max-h-[360px] space-y-2 overflow-y-auto pr-2">
             {visibleRankings.map((rank) => (
-              <div key={rank.id} className="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                <div className="mb-2 flex items-center gap-3">
+              <div key={rank.id} className="rounded-lg border border-slate-100 bg-slate-50 p-2.5">
+                <div className="mb-2 flex items-center gap-2.5">
                   <span
-                    className={`flex h-7 w-7 items-center justify-center rounded text-xs font-bold ${
+                    className={`flex h-6 w-6 items-center justify-center rounded text-[11px] font-bold ${
                       rank.id === 1
                         ? 'bg-emerald-600 text-white'
                         : rank.id === 2
@@ -389,8 +400,8 @@ export function Overview() {
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="truncate text-sm font-bold text-slate-900">{rank.city}</span>
-                      <span className="font-mono text-sm font-bold text-emerald-700">{rank.score}</span>
+                      <span className="truncate text-xs font-bold text-slate-900">{rank.city}</span>
+                      <span className="font-mono text-xs font-bold text-emerald-700">{rank.score}</span>
                     </div>
                     <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200">
                       <div className="h-full rounded-full bg-emerald-600" style={{ width: `${rank.score}%` }} />
@@ -407,22 +418,22 @@ export function Overview() {
         </div>
       </section>
 
-      <section className="grid gap-5 xl:grid-cols-[1.1fr_1fr_0.95fr]">
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-center justify-between">
+      <section className="grid gap-4 xl:grid-cols-[1.1fr_1fr_0.95fr]">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-slate-900">能源结构</h3>
-              <p className="text-sm text-slate-500">{currentHub.city}能源结构</p>
+              <h3 className="text-base font-bold text-slate-900">能源结构</h3>
+              <p className="text-xs text-slate-500">{currentHub.city}能源结构</p>
             </div>
-            <div className="flex items-center gap-3">
-              <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">
+            <div className="flex items-center gap-2">
+              <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-700">
                 {greenShare}% 绿电
               </span>
               <BarChart3 className="h-5 w-5 text-emerald-600" />
             </div>
           </div>
-          <div className="grid gap-4 xl:grid-cols-[1fr_0.9fr]">
-            <div className="h-[240px]">
+          <div className="grid gap-3 xl:grid-cols-[1fr_0.9fr]">
+            <div className="h-[210px]">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie data={energyMix} dataKey="value" nameKey="name" innerRadius={62} outerRadius={88} paddingAngle={2}>
@@ -434,10 +445,10 @@ export function Overview() {
                 </PieChart>
               </ResponsiveContainer>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               {energyMix.map((item) => (
-                <div key={item.name} className="rounded-lg border border-slate-100 bg-slate-50 p-3">
-                  <div className="flex items-center justify-between text-sm">
+                <div key={item.name} className="rounded-lg border border-slate-100 bg-slate-50 p-2.5">
+                  <div className="flex items-center justify-between text-xs">
                     <span className="flex items-center gap-2 font-medium text-slate-700">
                       <span className="h-2.5 w-2.5 rounded-full" style={{ background: item.color }} />
                       {item.name}
@@ -449,24 +460,24 @@ export function Overview() {
                   </div>
                 </div>
               ))}
-              <div className="rounded-lg border border-emerald-100 bg-emerald-50 p-3 text-sm font-medium text-emerald-800">
+              <div className="rounded-lg border border-emerald-100 bg-emerald-50 p-2.5 text-xs font-medium text-emerald-800">
                 当前绿电占比{greenShare >= 80 ? '已超过80%，正在向90%目标逼近。' : '仍需继续提升，建议优先增加风光消纳。'}
               </div>
             </div>
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4">
-            <h3 className="text-lg font-bold text-slate-900">LMDI效应</h3>
-            <p className="text-sm text-slate-500">规模、结构与强度的累计贡献</p>
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3">
+            <h3 className="text-base font-bold text-slate-900">LMDI效应</h3>
+            <p className="text-xs text-slate-500">规模、结构与强度的累计贡献</p>
           </div>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {lmdiEffects.map((item) => (
-              <div key={item.name} className="rounded-lg border border-slate-100 bg-slate-50 p-3">
+              <div key={item.name} className="rounded-lg border border-slate-100 bg-slate-50 p-2.5">
                 <div className="mb-2 flex items-center justify-between">
-                  <span className="text-sm font-bold text-slate-700">{item.name}</span>
-                  <span className="font-mono text-sm font-bold" style={{ color: item.color }}>
+                  <span className="text-xs font-bold text-slate-700">{item.name}</span>
+                  <span className="font-mono text-xs font-bold" style={{ color: item.color }}>
                     {item.value > 0 ? '+' : ''}
                     {item.value}%
                   </span>
@@ -484,31 +495,31 @@ export function Overview() {
               </div>
             ))}
           </div>
-          <div className="mt-4 rounded-lg border border-emerald-100 bg-emerald-50 p-3 text-sm font-bold text-emerald-800">
+          <div className="mt-3 rounded-lg border border-emerald-100 bg-emerald-50 p-2.5 text-xs font-bold text-emerald-800">
             结构+强度减排贡献：{lmdiReductionContribution}%
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4">
-            <h3 className="text-lg font-bold text-slate-900">DID政策效应</h3>
-            <p className="text-sm text-slate-500">处理组与对照组的动态差异</p>
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3">
+            <h3 className="text-base font-bold text-slate-900">DID政策效应</h3>
+            <p className="text-xs text-slate-500">处理组与对照组的动态差异</p>
           </div>
           <div className="grid grid-cols-3 gap-2">
-            <div className="rounded-lg border border-slate-100 bg-slate-50 p-3 text-center">
+            <div className="rounded-lg border border-slate-100 bg-slate-50 p-2.5 text-center">
               <div className="text-[10px] text-slate-500">政策效应</div>
-              <div className="mt-1 text-xl font-black text-emerald-600">-0.28</div>
+              <div className="mt-1 text-lg font-black text-emerald-600">-0.28</div>
             </div>
-            <div className="rounded-lg border border-slate-100 bg-slate-50 p-3 text-center">
+            <div className="rounded-lg border border-slate-100 bg-slate-50 p-2.5 text-center">
               <div className="text-[10px] text-slate-500">t统计量</div>
-              <div className="mt-1 text-xl font-black text-slate-900">-3.56</div>
+              <div className="mt-1 text-lg font-black text-slate-900">-3.56</div>
             </div>
-            <div className="rounded-lg border border-slate-100 bg-slate-50 p-3 text-center">
+            <div className="rounded-lg border border-slate-100 bg-slate-50 p-2.5 text-center">
               <div className="text-[10px] text-slate-500">显著性</div>
-              <div className="mt-1 text-xl font-black text-emerald-700">***</div>
+              <div className="mt-1 text-lg font-black text-emerald-700">***</div>
             </div>
           </div>
-          <div className="mt-4 h-[170px]">
+          <div className="mt-3 h-[145px]">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={didBars} margin={{ top: 10, right: 0, left: -10, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
@@ -519,31 +530,31 @@ export function Overview() {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <div className="mt-3 rounded-lg border border-slate-100 bg-slate-50 p-3 text-[11px] leading-relaxed text-slate-500">
+          <div className="mt-2 rounded-lg border border-slate-100 bg-slate-50 p-2.5 text-[11px] leading-relaxed text-slate-500">
             政策实施后，处理组相对对照组呈现显著下降，说明东数西算在减排与能效提升上具有明确政策效果。
           </div>
         </div>
       </section>
 
-      <section className="grid gap-5 xl:grid-cols-[1.15fr_0.85fr]">
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-center justify-between">
+      <section className="grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-slate-900">实时爬取数据池</h3>
-              <p className="text-sm text-slate-500">
+              <h3 className="text-base font-bold text-slate-900">实时爬取数据池</h3>
+              <p className="text-xs text-slate-500">
                 共 {liveData?.meta.highlightCount ?? sourceHighlights.length} 条指标片段，可滚轮查看全部
               </p>
             </div>
             <Globe2 className="h-5 w-5 text-emerald-600" />
           </div>
-          <div className="scroll-panel grid max-h-[560px] gap-3 overflow-y-auto pr-2 md:grid-cols-2 2xl:grid-cols-3">
+          <div className="scroll-panel grid max-h-[430px] gap-2.5 overflow-y-auto pr-2 md:grid-cols-2 2xl:grid-cols-3">
             {visibleSourceHighlights.map((item, index) => (
               <a
                 key={`${item.sourceId}-${item.metric}-${index}`}
                 href={item.url}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg border border-slate-100 bg-slate-50 p-3 transition-colors hover:border-emerald-200 hover:bg-emerald-50"
+                className="rounded-lg border border-slate-100 bg-slate-50 p-2.5 transition-colors hover:border-emerald-200 hover:bg-emerald-50"
               >
                 <div className="mb-2 flex items-center justify-between gap-2">
                   <span className="truncate text-xs font-bold text-slate-500">{item.source}</span>
@@ -552,7 +563,7 @@ export function Overview() {
                   </span>
                 </div>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-2xl font-black text-slate-900">{item.value}</span>
+                  <span className="text-xl font-black text-slate-900">{item.value}</span>
                   <span className="text-xs font-bold text-slate-500">{item.unit}</span>
                 </div>
                 <p className="mt-2 line-clamp-2 text-[11px] leading-relaxed text-slate-500">{item.snippet}</p>
@@ -566,24 +577,24 @@ export function Overview() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="mb-4 flex items-center justify-between">
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-3 flex items-center justify-between">
             <div>
-              <h3 className="text-lg font-bold text-slate-900">盟市扩展数据</h3>
-              <p className="text-sm text-slate-500">共 {liveData?.meta.cityCount ?? cityDetails.length} 个盟市节点，可滚轮查看全部</p>
+              <h3 className="text-base font-bold text-slate-900">盟市扩展数据</h3>
+              <p className="text-xs text-slate-500">共 {liveData?.meta.cityCount ?? cityDetails.length} 个盟市节点，可滚轮查看全部</p>
             </div>
             <FileText className="h-5 w-5 text-emerald-600" />
           </div>
-          <div className="scroll-panel max-h-[560px] space-y-3 overflow-y-auto pr-2">
+          <div className="scroll-panel max-h-[430px] space-y-2.5 overflow-y-auto pr-2">
             {visibleCityDetails.map((item, index) => (
-              <div key={item.name} className="rounded-lg border border-slate-100 bg-slate-50 p-3">
+              <div key={item.name} className="rounded-lg border border-slate-100 bg-slate-50 p-2.5">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex min-w-0 items-center gap-3">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-white text-xs font-black text-emerald-700">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded bg-white text-[11px] font-black text-emerald-700">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                     <div className="min-w-0">
-                      <div className="truncate text-sm font-bold text-slate-900">{item.name}</div>
+                      <div className="truncate text-xs font-bold text-slate-900">{item.name}</div>
                       <div className="mt-1 text-[11px] text-slate-500">{item.load ?? '节点算力待同步'}</div>
                     </div>
                   </div>
@@ -593,15 +604,15 @@ export function Overview() {
                   </div>
                 </div>
                 <div className="mt-3 grid grid-cols-3 gap-2 text-center text-[11px]">
-                  <div className="rounded bg-white p-2">
+                  <div className="rounded bg-white p-1.5">
                     <div className="text-slate-400">PUE</div>
                     <div className="mt-1 font-bold text-slate-900">{item.pue}</div>
                   </div>
-                  <div className="rounded bg-white p-2">
+                  <div className="rounded bg-white p-1.5">
                     <div className="text-slate-400">绿电</div>
                     <div className="mt-1 font-bold text-emerald-700">{item.green}%</div>
                   </div>
-                  <div className="rounded bg-white p-2">
+                  <div className="rounded bg-white p-1.5">
                     <div className="text-slate-400">碳强度</div>
                     <div className="mt-1 font-bold text-amber-600">{item.carbon}</div>
                   </div>
@@ -612,7 +623,7 @@ export function Overview() {
         </div>
       </section>
 
-      <footer className="grid gap-2 rounded-xl border border-slate-200 bg-white px-4 py-3 text-[11px] text-slate-500 shadow-sm md:grid-cols-4">
+      <footer className="grid gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-[10px] text-slate-500 shadow-sm md:grid-cols-4">
         <div className="flex items-center gap-2">
           <MapPin className="h-4 w-4 text-emerald-600" />
           内蒙古数据中心：{liveData?.kpis.dcProjects ?? 12} 个

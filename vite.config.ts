@@ -21,7 +21,7 @@ export default defineConfig(({mode}) => {
       hmr: process.env.DISABLE_HMR !== 'true',
       proxy: {
         '/api': {
-          target: env.VITE_API_BASE_URL || 'http://127.0.0.1:5000',
+          target: env.VITE_API_BASE_URL || 'http://127.0.0.1:5050',
           changeOrigin: true,
         },
       },

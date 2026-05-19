@@ -241,6 +241,44 @@ def _source_highlights(source_texts: list[SourceText]) -> list[dict[str, Any]]:
             if sum(1 for highlight in highlights if highlight["sourceId"] == item.id) >= 5:
                 break
 
+    if len(highlights) < 30:
+        global_seen = {
+            (highlight["sourceId"], highlight["metric"], highlight["value"], highlight.get("unit", ""))
+            for highlight in highlights
+        }
+        broad_pattern = re.compile(
+            r"(\d+(?:\.\d+)?)\s*(万P|PFlops|EFLOPS|P|%|亿千瓦|万千瓦|亿度|亿千瓦时|万千瓦时|亿元|万亿元|吨|万吨|个)",
+            re.IGNORECASE,
+        )
+
+        for item in source_texts:
+            if len(highlights) >= 30:
+                break
+            if not item.ok or not item.text:
+                continue
+
+            for match in broad_pattern.finditer(item.text):
+                value = match.group(1)
+                unit = match.group(2)
+                key = (item.id, "公开指标", value, unit)
+                if key in global_seen:
+                    continue
+
+                global_seen.add(key)
+                highlights.append(
+                    {
+                        "sourceId": item.id,
+                        "source": item.name,
+                        "url": item.url,
+                        "metric": "公开指标",
+                        "value": value,
+                        "unit": unit,
+                        "snippet": _evidence(item.text, match.start(), match.end()),
+                    }
+                )
+                if len(highlights) >= 30:
+                    break
+
     return highlights[:30]
 
 
@@ -265,7 +303,7 @@ def _energy_mix(green_ratio: float) -> list[dict[str, Any]]:
     ]
 
 
-def _trend(green_ratio: float, compute_wanp: float, pue: float, latest_year: int = 2024) -> list[dict[str, Any]]:
+def _trend(green_ratio: float, compute_wanp: float, pue: float, latest_year: int = 2025) -> list[dict[str, Any]]:
     anchors = [
         (2020, 0.41, 0.42, 1.72),
         (2021, 0.54, 0.54, 1.61),
@@ -363,7 +401,7 @@ def _region_metrics(hubs: list[dict[str, Any]], green_ratio: float, pue: float) 
     return sorted(metrics, key=lambda item: item["score"], reverse=True)
 
 
-def _build_dataset(source_texts: list[SourceText], latest_year: int = 2024, method: str | None = None) -> dict[str, Any]:
+def _build_dataset(source_texts: list[SourceText], latest_year: int = 2025, method: str | None = None) -> dict[str, Any]:
     facts = _extract_facts(source_texts)
     highlights = _source_highlights(source_texts)
     green_ratio = _value(facts, "greenRatio", 84.57)

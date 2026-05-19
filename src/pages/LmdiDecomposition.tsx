@@ -36,6 +36,7 @@ const TARGET_PROGRESS = {
   '2022': 0.48,
   '2023': 0.72,
   '2024': 1,
+  '2025': 1.18,
 };
 
 const SCOPE_FACTORS = {
@@ -73,7 +74,7 @@ const signedNumber = (value: number) => `${value > 0 ? '+' : ''}${formatNumber(r
 
 function buildLmdiScenario(baseYear: string, targetYear: string, scope: string) {
   const baseKey = (baseYear in YEAR_BASELINE ? baseYear : '2020') as keyof typeof YEAR_BASELINE;
-  const targetKey = (targetYear in TARGET_PROGRESS ? targetYear : '2024') as keyof typeof TARGET_PROGRESS;
+  const targetKey = (targetYear in TARGET_PROGRESS ? targetYear : '2025') as keyof typeof TARGET_PROGRESS;
   const scopeKey = (scope in SCOPE_FACTORS ? scope : '全部枢纽城市') as keyof typeof SCOPE_FACTORS;
   const scopeFactor = SCOPE_FACTORS[scopeKey];
   const baseEffects = EFFECT_BASELINE[baseKey];
@@ -125,7 +126,7 @@ function buildLmdiScenario(baseYear: string, targetYear: string, scope: string) 
 
   const baseNum = Number(baseKey);
   const targetNum = Number(targetKey);
-  const candidateYears = [2015, 2018, 2020, 2021, 2022, 2023, 2024].filter((year) => year >= baseNum && year <= targetNum);
+  const candidateYears = [2015, 2018, 2020, 2021, 2022, 2023, 2024, 2025].filter((year) => year >= baseNum && year <= targetNum);
   const historicalData = candidateYears.map((year) => {
     const step = targetNum === baseNum ? 1 : (year - baseNum) / (targetNum - baseNum);
     const eased = Math.max(0, Math.min(1, step));
@@ -163,7 +164,7 @@ function buildLmdiScenario(baseYear: string, targetYear: string, scope: string) 
 
 export function LmdiDecomposition() {
   const [baseYear, setBaseYear] = useState('2020');
-  const [targetYear, setTargetYear] = useState('2024');
+  const [targetYear, setTargetYear] = useState('2025');
   const [scope, setScope] = useState('全部枢纽城市');
   const [analysisTime, setAnalysisTime] = useState('尚未手动更新');
   const scenario = buildLmdiScenario(baseYear, targetYear, scope);
@@ -224,6 +225,7 @@ export function LmdiDecomposition() {
                 onChange={(event) => setTargetYear(event.target.value)}
                 className="h-10 rounded-lg border border-slate-200 bg-slate-50 px-3 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
               >
+                <option>2025</option>
                 <option>2024</option>
                 <option>2023</option>
                 <option>2022</option>

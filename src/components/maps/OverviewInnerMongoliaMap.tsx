@@ -40,7 +40,7 @@ type OverviewInnerMongoliaMapProps = {
 };
 
 const MAP_WIDTH = 900;
-const MAP_HEIGHT = 420;
+const MAP_HEIGHT = 400;
 const MAP_PADDING = 4;
 const MAP_ZOOM = 1.16;
 
@@ -65,6 +65,21 @@ const REGION_GREEN: Record<string, number> = {
   兴安盟: 66.7,
   锡林郭勒盟: 74.9,
   阿拉善盟: 69.3,
+};
+
+const REGION_PASTEL_COLORS: Record<string, string> = {
+  呼和浩特市: '#f7ed9d',
+  包头市: '#f6b6ba',
+  乌海市: '#f3c48e',
+  赤峰市: '#f1c9a8',
+  通辽市: '#f8bfc9',
+  鄂尔多斯市: '#f8c999',
+  呼伦贝尔市: '#c9ecc5',
+  巴彦淖尔市: '#cde9ee',
+  乌兰察布市: '#dff1b6',
+  兴安盟: '#d6efcc',
+  锡林郭勒盟: '#c7e8e9',
+  阿拉善盟: '#ddd3f2',
 };
 
 const REGION_LABEL_OFFSETS: Record<string, { dx: number; dy: number }> = {
@@ -181,12 +196,7 @@ function hasHubLabel(hubs: HubPoint[], regionName: string) {
 }
 
 function regionFill(name = '') {
-  const green = REGION_GREEN[name] ?? 65;
-
-  if (green >= 82) return '#bbf7d0';
-  if (green >= 75) return '#dcfce7';
-  if (green >= 68) return '#ecfdf5';
-  return '#fef3c7';
+  return REGION_PASTEL_COLORS[name] ?? '#edf2f7';
 }
 
 export function OverviewInnerMongoliaMap({ hubs, selectedId = 'overview', onSelectHub }: OverviewInnerMongoliaMapProps) {
@@ -239,7 +249,7 @@ export function OverviewInnerMongoliaMap({ hubs, selectedId = 'overview', onSele
   return (
     <div
       ref={mapRef}
-      className="relative min-h-[430px] overflow-hidden rounded-xl border border-slate-200 bg-slate-50"
+      className="relative min-h-[360px] overflow-hidden rounded-xl border border-slate-200 bg-slate-50"
       style={{ overscrollBehavior: 'contain' }}
       title="滚轮缩放地图，点击节点切换口径"
     >
@@ -287,7 +297,7 @@ export function OverviewInnerMongoliaMap({ hubs, selectedId = 'overview', onSele
                     stroke="#cbd5e1"
                     strokeWidth={1.1}
                     fillRule="evenodd"
-                    className="cursor-pointer transition-colors hover:fill-emerald-100"
+                    className="cursor-pointer transition-colors hover:fill-yellow-100"
                     onClick={() => notify(`${name}：绿电占比 ${REGION_GREEN[name] ?? 65}%`)}
                   >
                     <title>{`${name} / 绿电占比 ${REGION_GREEN[name] ?? 65}%`}</title>

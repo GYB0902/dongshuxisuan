@@ -527,7 +527,7 @@ export function GreenCompute() {
             <h3 className="text-lg font-bold text-slate-900">PUE 排名</h3>
             <p className="text-sm text-slate-500">共 12 个盟市节点，滚轮查看全部</p>
           </div>
-          <div className="grid grid-cols-[42px_1fr_58px_66px_64px] gap-2 border-y border-slate-100 py-2 text-[10px] font-bold text-slate-400">
+          <div className="grid grid-cols-[34px_minmax(4.5rem,1fr)_44px_46px_50px] gap-1.5 border-y border-slate-100 py-2 text-[10px] font-bold text-slate-400">
             <span>排名</span>
             <span>城市</span>
             <span className="pr-3 text-right">PUE</span>
@@ -538,10 +538,10 @@ export function GreenCompute() {
             {visiblePueRank.map((item, index) => (
               <div
                 key={item.city}
-                className="grid grid-cols-[42px_1fr_58px_66px_64px] items-center gap-2 border-b border-slate-100 py-2.5 text-sm last:border-b-0"
+                className="grid grid-cols-[34px_minmax(4.5rem,1fr)_44px_46px_50px] items-center gap-1.5 border-b border-slate-100 py-2.5 text-sm last:border-b-0"
               >
                 <span
-                  className={`flex h-7 w-7 items-center justify-center rounded text-[11px] font-black ${
+                  className={`flex h-6 w-6 items-center justify-center rounded text-[10px] font-black ${
                     index === 0
                       ? 'bg-emerald-600 text-white'
                       : index === 1
@@ -553,7 +553,7 @@ export function GreenCompute() {
                 >
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <span className="truncate font-bold text-slate-900">{item.city}</span>
+                <span className="whitespace-nowrap text-[11px] font-semibold text-slate-900">{item.city}</span>
                 <span className="text-right font-mono font-black text-emerald-700">{item.pue}</span>
                 <span className="text-right font-mono text-xs font-bold text-slate-700">{item.score}</span>
                 <span className="text-right font-mono text-xs font-bold text-slate-500">{item.green}%</span>
